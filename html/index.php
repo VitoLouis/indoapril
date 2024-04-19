@@ -7,7 +7,6 @@
     <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit." />
 
     <title>Indoapril</title>
-    <title>Indoapril</title>
     <!-- Favicon-->
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" />
