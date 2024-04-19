@@ -1,20 +1,11 @@
-﻿<!doctype html>
+﻿<?php
+    include 'koneksi.php';
+    ?>
+<!doctype html>
 <html class="no-js " lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-<meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
-
-<title>:: Nexa :: EC Product</title>
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<!-- Favicon-->
-<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-<!-- Custom Css -->
-<link rel="stylesheet" href="assets/css/main.css">
-<link rel="stylesheet" href="assets/css/ecommerce.css">
-<link rel="stylesheet" href="assets/css/color_skins.css">
-</head>
+<?php
+    include 'header.php';
+    ?>
 <body class="theme-orange">
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
@@ -665,17 +656,17 @@
                 <div class="card product_item">
                     <div class="body">
                         <div class="cp_img">
-                            <img src="assets/images/ecommerce/1.png" alt="Product" class="img-fluid" />
+                            <img src="assets/images/ecommerce/product1.png" alt="Product" class="img-fluid" />
                             <div class="hover">
                                 <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-plus"></i></a>
                                 <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-shopping-cart"></i></a>
                             </div>
                         </div>
                         <div class="product_details">
-                            <h5><a href="ec-product-detail.html">Simple Black Clock</a></h5>
+                            <h5><a href="ec-product-detail.html">Fruit Tea</a></h5>
                             <ul class="product_price list-unstyled">
-                                <li class="old_price">$16.00</li>
-                                <li class="new_price">$13.00</li>
+                                <li class="old_price">Rp 3000</li>
+                                <li class="new_price">Rp 7000</li>
                             </ul>
                         </div>
                     </div>
@@ -685,17 +676,17 @@
                 <div class="card product_item">
                     <div class="body">
                         <div class="cp_img">
-                            <img src="assets/images/ecommerce/15.png" alt="Product" class="img-fluid" />
+                            <img src="assets/images/ecommerce/Product2.png" alt="Product" class="img-fluid" />
                             <div class="hover">
                                 <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-plus"></i></a>
                                 <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-shopping-cart"></i></a>
                             </div>
                         </div>
                         <div class="product_details">
-                            <h5><a href="ec-product-detail.html">Simple Black Clock</a></h5>
+                            <h5><a href="ec-product-detail.html">Pocari Sweat</a></h5>
                             <ul class="product_price list-unstyled">
-                                <li class="old_price">$12.00</li>
-                                <li class="new_price">$11.00</li>
+                                <li class="old_price">Rp 10.000</li>
+                                <li class="new_price">Rp 17.000</li>
                             </ul>
                         </div>
                     </div>
@@ -705,17 +696,17 @@
                 <div class="card product_item">
                     <div class="body">
                         <div class="cp_img">
-                            <img src="assets/images/ecommerce/13.png" alt="Product" class="img-fluid" />
+                            <img src="assets/images/ecommerce/Product3.png  " alt="Product" class="img-fluid" />
                             <div class="hover">
                                 <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-plus"></i></a>
                                 <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-shopping-cart"></i></a>
                             </div>
                         </div>
                         <div class="product_details">
-                            <h5><a href="ec-product-detail.html">Brone Candle</a></h5>
+                            <h5><a href="ec-product-detail.html">Mizone</a></h5>
                             <ul class="product_price list-unstyled">
-                                <li class="old_price">$23.00</li>
-                                <li class="new_price">$17.00</li>
+                                <li class="old_price">Rp 15.000</li>
+                                <li class="new_price">Rp 20.000</li>
                             </ul>
                         </div>
                     </div>
@@ -725,17 +716,17 @@
                 <div class="card product_item">
                     <div class="body">
                         <div class="cp_img">
-                            <img src="assets/images/ecommerce/4.png" alt="Product" class="img-fluid" />
+                            <img src="assets/images/ecommerce/Product4.jpg.webp" alt="Product" class="img-fluid" />
                             <div class="hover">
                                 <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-plus"></i></a>
                                 <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-shopping-cart"></i></a>
                             </div>
                         </div>
                         <div class="product_details">
-                            <h5><a href="ec-product-detail.html">Simple Black Clock</a></h5>
+                            <h5><a href="ec-product-detail.html">Isoplus</a></h5>
                             <ul class="product_price list-unstyled">
-                                <li class="old_price">$16.00</li>
-                                <li class="new_price">$10.00</li>
+                                <li class="old_price">Rp 15.000</li>
+                                <li class="new_price">Rp 22.000</li>
                             </ul>
                         </div>
                     </div>
