@@ -31,7 +31,7 @@
         
         <div class="navbar-header">
             <a href="javascript:void(0);" class="bars"></a>
-            <a class="navbar-brand" href="index.html">Nexa</a>
+            <a class="navbar-brand" href="index.php">Nexa</a>
         </div>
 
         <ul class="nav navbar-nav navbar-left">
@@ -194,11 +194,11 @@
             <li class="header">MAIN NAVIGATION</li>
             <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a>
                 <ul class="ml-menu">
-                    <li><a href="index.html">Main Dashboard</a></li>
+                    <li><a href="index.php">Main Dashboard</a></li>
                     <li><a href="dashboard-rtl.html">RTL Dashboard</a></li>
                     <li><a href="index2.html">Horizontal Menu</a></li>
                     <li><a href="blog-dashboard.html">Blog Dashboard</a></li>
-                    <li><a href="ec-dashboard.html">Ecommerce Dashboard</a></li>
+                    <li><a href="ec-dashboard.php">Ecommerce Dashboard</a></li>
                     <li><a href="iot-dashboard.html">Iot Dashboard</a></li>                        
                 </ul>
             </li>
@@ -207,10 +207,10 @@
             <li><a href="blog-dashboard.html"><i class="zmdi zmdi-blogger"></i><span>Blogger</span> </a></li>
             <li class="active open"><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-shopping-cart"></i><span>Ecommerce</span> </a>
                 <ul class="ml-menu">
-                    <li><a href="ec-dashboard.html">Dashboard</a></li>
-                    <li class="active"><a href="ec-product.html">Product</a></li>
-                    <li><a href="ec-product-List.html">Product List</a></li>
-                    <li><a href="ec-product-detail.html">Product detail</a></li>
+                    <li><a href="ec-dashboard.php">Dashboard</a></li>
+                    <li class="active"><a href="ec-product.php">Product</a></li>
+                    <li><a href="ec-product-List.php">Product List</a></li>
+                    <li><a href="ec-product-detail.php">Product detail</a></li>
                 </ul>
             </li>
             <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-swap-alt"></i><span>User Interface (UI)</span> </a>
@@ -218,7 +218,7 @@
                     <li><a href="typography.html">Typography</a></li>
                     <li><a href="helper-classes.html">Helper Classes</a></li>
                     <li><a href="alerts.html">Alerts</a></li>
-                    <li><a href="animations.html">Animations</a></li>
+                    <li><a href="animations.html">A nimations</a></li>
                     <li><a href="badges.html">Badges</a></li>
                     <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
                     <li><a href="buttons.html">Buttons</a></li>
@@ -643,8 +643,8 @@
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12">
                 <ul class="breadcrumb float-md-right">
-                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Nexa</a></li>
-                    <li class="breadcrumb-item"><a href="ec-dashboard.html">eCommerce</a></li>
+                    <li class="breadcrumb-item"><a href="index.php"><i class="zmdi zmdi-home"></i> Nexa</a></li>
+                    <li class="breadcrumb-item"><a href="ec-dashboard.php">eCommerce</a></li>
                     <li class="breadcrumb-item active">Product</li>
                 </ul>
             </div>
@@ -663,7 +663,7 @@
                             </div>
                         </div>
                         <div class="product_details">
-                            <h5><a href="ec-product-detail.html">Fruit Tea</a></h5>
+                            <h5><a href="ec-product-detail.php">Fruit Tea</a></h5>
                             <ul class="product_price list-unstyled">
                                 <li class="old_price">Rp 3000</li>
                                 <li class="new_price">Rp 7000</li>
@@ -683,7 +683,7 @@
                             </div>
                         </div>
                         <div class="product_details">
-                            <h5><a href="ec-product-detail.html">Pocari Sweat</a></h5>
+                            <h5><a href="ec-product-detail.php">Pocari Sweat</a></h5>
                             <ul class="product_price list-unstyled">
                                 <li class="old_price">Rp 10.000</li>
                                 <li class="new_price">Rp 17.000</li>
@@ -703,7 +703,7 @@
                             </div>
                         </div>
                         <div class="product_details">
-                            <h5><a href="ec-product-detail.html">Mizone</a></h5>
+                            <h5><a href="ec-product-detail.php">Mizone</a></h5>
                             <ul class="product_price list-unstyled">
                                 <li class="old_price">Rp 15.000</li>
                                 <li class="new_price">Rp 20.000</li>
@@ -723,7 +723,7 @@
                             </div>
                         </div>
                         <div class="product_details">
-                            <h5><a href="ec-product-detail.html">Isoplus</a></h5>
+                            <h5><a href="ec-product-detail.php">Isoplus</a></h5>
                             <ul class="product_price list-unstyled">
                                 <li class="old_price">Rp 15.000</li>
                                 <li class="new_price">Rp 22.000</li>
@@ -743,7 +743,7 @@
                             </div>
                         </div>
                         <div class="product_details">
-                            <h5><a href="ec-product-detail.html">Brone Lamp Glasses</a></h5>
+                            <h5><a href="ec-product-detail.php">Brone Lamp Glasses</a></h5>
                             <ul class="product_price list-unstyled">
                                 <li class="old_price">$18.00</li>
                                 <li class="new_price">$15.00</li>
@@ -763,7 +763,7 @@
                             </div>
                         </div>
                         <div class="product_details">
-                            <h5><a href="ec-product-detail.html">Unero Small Bag</a></h5>
+                            <h5><a href="ec-product-detail.php">Unero Small Bag</a></h5>
                             <ul class="product_price list-unstyled">
                                 <li class="old_price">$21.00</li>
                                 <li class="new_price">$17.00</li>
@@ -783,7 +783,7 @@
                             </div>
                         </div>
                         <div class="product_details">
-                            <h5><a href="ec-product-detail.html">Unero Round Sunglass</a></h5>
+                            <h5><a href="ec-product-detail.php">Unero Round Sunglass</a></h5>
                             <ul class="product_price list-unstyled">
                                 <li class="old_price">$16.00</li>
                                 <li class="new_price">$10.00</li>
@@ -803,7 +803,7 @@
                             </div>
                         </div>
                         <div class="product_details">
-                            <h5><a href="ec-product-detail.html">Wood Simple Clock</a></h5>
+                            <h5><a href="ec-product-detail.php">Wood Simple Clock</a></h5>
                             <ul class="product_price list-unstyled">
                                 <li class="old_price">$16.00</li>
                                 <li class="new_price">$10.00</li>
@@ -823,7 +823,7 @@
                             </div>
                         </div>
                         <div class="product_details">
-                            <h5><a href="ec-product-detail.html">Wood Long TV Board</a></h5>
+                            <h5><a href="ec-product-detail.php">Wood Long TV Board</a></h5>
                             <ul class="product_price list-unstyled">
                                 <li class="old_price">$16.00</li>
                                 <li class="new_price">$10.00</li>
@@ -843,7 +843,7 @@
                             </div>
                         </div>
                         <div class="product_details">
-                            <h5><a href="ec-product-detail.html">Simple Black Clock</a></h5>
+                            <h5><a href="ec-product-detail.php">Simple Black Clock</a></h5>
                             <ul class="product_price list-unstyled">
                                 <li class="old_price">$16.00</li>
                                 <li class="new_price">$10.00</li>
@@ -863,7 +863,7 @@
                             </div>
                         </div>
                         <div class="product_details">
-                            <h5><a href="ec-product-detail.html">Wood Simple Chair V2</a></h5>
+                            <h5><a href="ec-product-detail.php">Wood Simple Chair V2</a></h5>
                             <ul class="product_price list-unstyled">
                                 <li class="old_price">$16.00</li>
                                 <li class="new_price">$10.00</li>
@@ -883,7 +883,7 @@
                             </div>
                         </div>
                         <div class="product_details">
-                            <h5><a href="ec-product-detail.html">Simple Black Clock</a></h5>
+                            <h5><a href="ec-product-detail.php">Simple Black Clock</a></h5>
                             <ul class="product_price list-unstyled">
                                 <li class="old_price">$16.00</li>
                                 <li class="new_price">$10.00</li>

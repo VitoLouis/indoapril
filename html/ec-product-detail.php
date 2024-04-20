@@ -1,22 +1,11 @@
-﻿<!doctype html>
+﻿<?php
+    include 'koneksi.php';
+    ?>
+<!doctype html>
 <html class="no-js " lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-<meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
-
-<title>:: Nexa :: EC Dashboard</title>
-<!-- Favicon-->
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/plugins/jvectormap/jquery-jvectormap-2.0.3.css"/>
-<link rel="stylesheet" href="assets/plugins/morrisjs/morris.css" />
-<!-- Custom Css -->
-<link rel="stylesheet" href="assets/css/main.css">
-<link rel="stylesheet" href="assets/css/ecommerce.css">
-<link rel="stylesheet" href="assets/css/color_skins.css">
-</head>
+<?php
+    include 'header.php';
+    ?>
 <body class="theme-orange">
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
@@ -28,6 +17,7 @@
         <div class="m-t-30"><img src="assets/images/logo.svg" width="48" height="48" alt="Nexa"></div>
     </div>
 </div>
+
 <!-- Overlay For Sidebars -->
 <div class="overlay"></div><!-- Search  -->
 <div class="search-bar">
@@ -41,7 +31,7 @@
         
         <div class="navbar-header">
             <a href="javascript:void(0);" class="bars"></a>
-            <a class="navbar-brand" href="index.html">Nexa</a>
+            <a class="navbar-brand" href="index.php">Nexa</a>
         </div>
 
         <ul class="nav navbar-nav navbar-left">
@@ -204,11 +194,11 @@
             <li class="header">MAIN NAVIGATION</li>
             <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a>
                 <ul class="ml-menu">
-                    <li><a href="index.html">Main Dashboard</a></li>
+                    <li><a href="index.php">Main Dashboard</a></li>
                     <li><a href="dashboard-rtl.html">RTL Dashboard</a></li>
                     <li><a href="index2.html">Horizontal Menu</a></li>
                     <li><a href="blog-dashboard.html">Blog Dashboard</a></li>
-                    <li><a href="ec-dashboard.html">Ecommerce Dashboard</a></li>
+                    <li><a href="ec-dashboard.php">Ecommerce Dashboard</a></li>
                     <li><a href="iot-dashboard.html">Iot Dashboard</a></li>                        
                 </ul>
             </li>
@@ -217,10 +207,10 @@
             <li><a href="blog-dashboard.html"><i class="zmdi zmdi-blogger"></i><span>Blogger</span> </a></li>
             <li class="active open"><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-shopping-cart"></i><span>Ecommerce</span> </a>
                 <ul class="ml-menu">
-                    <li class="active"><a href="ec-dashboard.html">Dashboard</a></li>
-                    <li><a href="ec-product.html">Product</a></li>
-                    <li><a href="ec-product-List.html">Product List</a></li>
-                    <li><a href="ec-product-detail.html">Product detail</a></li>
+                    <li><a href="ec-dashboard.php">Dashboard</a></li>
+                    <li><a href="ec-product.php">Product</a></li>
+                    <li><a href="ec-product-List.php">Product List</a></li>
+                    <li class="active"><a href="ec-product-detail.php">Product detail</a></li>
                 </ul>
             </li>
             <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-swap-alt"></i><span>User Interface (UI)</span> </a>
@@ -643,491 +633,152 @@
     </div>
 </div>
 
-<!-- Main Content -->
 <section class="content ecommerce-page">
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
-                <h2>eCommerce Dashboard
+                <h2>Product Detail
                 <small class="text-muted">Welcome to Nexa Application</small>
                 </h2>
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12">
                 <ul class="breadcrumb float-md-right">
-                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Nexa</a></li>
-                    <li class="breadcrumb-item"><a href="ec-dashboard.html">eCommerce</a></li>
-                    <li class="breadcrumb-item active">Dashboard</li>
+                    <li class="breadcrumb-item"><a href="index.php"><i class="zmdi zmdi-home"></i> Nexa</a></li>
+                    <li class="breadcrumb-item"><a href="ec-dashboard.php">eCommerce</a></li>
+                    <li class="breadcrumb-item active">Product Detail</li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="container-fluid">
         <div class="row clearfix">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card ">
-                    <div class="header">
-                        <h2>USA<small >Sales Report</small></h2>
-                    </div>
-                    <div class="body">
-                        <div class="row">
-                            <div class="col-sm-4 col-4 m-b-10">
-                                <span class="text-muted">Today</span>
-                                <h5 class="m-b-0">256</h5>                                
-                            </div>
-                            <div class="col-sm-4 col-4 m-b-10">
-                                <span class="text-muted">This Week</span>
-                                <h5 class="m-b-0">621</h5>                                
-                            </div>
-                            <div class="col-sm-4 col-4 m-b-10">
-                                <span class="text-muted">This Month</span>
-                                <h5 class="m-b-0">981</h5>                                
-                            </div>
-                        </div>
-                        <div class="progress m-b-10">
-                            <div class="progress-bar l-slategray" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
-                        </div>
-                        <small>Average 18% <i class="zmdi zmdi-trending-up"></i></small>
-                    </div>                    
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card ">
-                    <div class="header">
-                        <h2>India<small >Sales Report</small></h2>
-                    </div>
-                    <div class="body">
-                        <div class="row">
-                            <div class="col-sm-4 col-4 m-b-10">
-                                <span class="text-muted">Today</span>
-                                <h5 class="m-b-0">195</h5>                                
-                            </div>
-                            <div class="col-sm-4 col-4 m-b-10">
-                                <span class="text-muted">This Week</span>
-                                <h5 class="m-b-0">235</h5>                                
-                            </div>
-                            <div class="col-sm-4 col-4 m-b-10">
-                                <span class="text-muted">This Month</span>
-                                <h5 class="m-b-0">312</h5>                                
-                            </div>
-                        </div>
-                        <div class="progress m-b-10">
-                            <div class="progress-bar l-salmon" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
-                        </div>
-                        <small>Average 39% <i class="zmdi zmdi-trending-up"></i></small>
-                    </div>                    
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card ">
-                    <div class="header">
-                        <h2>Europe<small >Sales Report</small></h2>
-                    </div>
-                    <div class="body">
-                        <div class="row">
-                            <div class="col-sm-4 col-4 m-b-10">
-                                <span class="text-muted">Today</span>
-                                <h5 class="m-b-0">210</h5>                                
-                            </div>
-                            <div class="col-sm-4 col-4 m-b-10">
-                                <span class="text-muted">This Week</span>
-                                <h5 class="m-b-0">462</h5>                                
-                            </div>
-                            <div class="col-sm-4 col-4 m-b-10">
-                                <span class="text-muted">This Month</span>
-                                <h5 class="m-b-0">574</h5>                                
-                            </div>
-                        </div>
-                        <div class="progress m-b-10">
-                            <div class="progress-bar l-seagreen" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
-                        </div>
-                        <small>Average 10% <i class="zmdi zmdi-trending-up"></i></small>
-                    </div>                    
-                </div>
-            </div>
-        </div>
-        <div class="row clearfix">
-            <div class="col-lg-8 col-md-12">
-                <div class="card product-report">
-                    <div class="header">
-                        <h2>Annual Report <small>Description text here...</small></h2>
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more-vert"></i> </a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="body">
-                        <div class="row clearfix m-b-15">
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="icon l-amber"><i class="zmdi zmdi-chart-donut"></i></div>
-                                <div class="col-in">
-                                    <h4 class="counter m-b-0">$4,516</h4>
-                                    <small class="text-muted m-t-0">Sales Report</small>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="icon l-turquoise"><i class="zmdi zmdi-chart"></i></div>
-                                <div class="col-in">
-                                    <h4 class="counter m-b-0">$6,481</h4>
-                                    <small class="text-muted m-t-0">Annual Revenue </small>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="icon l-parpl"><i class="zmdi zmdi-card"></i></div>
-                                <div class="col-in">
-                                    <h4 class="counter m-b-0">$3,915</h4>
-                                    <small class="text-muted m-t-0">Total Profit</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="area_chart" class="graph"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-12">
-                <div class="card tasks_report ">
-                    <div class="header">
-                        <h2>Total Revenue</h2>
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more-vert"></i> </a>
-                                <ul class="dropdown-menu slideUp ">
-                                    <li><a href="javascript:void(0);">2017 Year</a></li>
-                                    <li><a href="javascript:void(0);">2016 Year</a></li>
-                                    <li><a href="javascript:void(0);">2015 Year</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="body text-center">
-                        <h4>Total Sale</h4>
-                        <h6 class="m-b-20">2,45,124</h6>
-                        <input type="text" class="knob dial1" value="66" data-width="140" data-height="140" data-thickness="0.1" data-fgColor="#00ced1" readonly>
-                        <h6 class="m-t-30">Satisfaction Rate</h6>
-                        <small class="displayblock">47% Average <i class="zmdi zmdi-trending-up"></i></small>
-                        <div class="sparkline m-t-20" data-type="bar" data-width="97%" data-height="80px" data-bar-Width="2" data-bar-Spacing="8" data-bar-Color="#00ced1">3,2,6,5,9,8,7,8,4,5,1,2,9,5,1,3,5,7,4,6</div>
-                    </div>
-                </div>
-            </div>
-        </div>               
-        <div class="row clearfix">
-            <div class="col-md-12 col-lg-12">
-                <div class="card visitors-map">
-                    <div class="header">
-                        <h2>Top Selling Country</h2>
-                    </div>
-                    <div class="body">
-                        <div class="row">                            
-                            <div class="col-xl-8 col-lg-8 col-md-12">
-                                <div id="world-map-markers" class="jvector-map"></div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-12">
-                                <div class="table-responsive">
-                                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text</p>
-                                    <table class="table table-hover m-b-0">
-                                        <thead>
-                                            <tr>
-                                                <th>Contrary</th>
-                                                <th>2017</th>
-                                                <th>2017</th>
-                                                <th>Change</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>USA</td>
-                                                <td>2,009</td>
-                                                <td>3,591</td>
-                                                <td>7.01% <i class="zmdi zmdi-trending-up text-success"></i></td>
-                                            </tr>
-                                            <tr>
-                                                <td>India</td>
-                                                <td>1,129</td>
-                                                <td>1,361</td>
-                                                <td>3.01% <i class="zmdi zmdi-trending-up text-success"></i></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Canada</td>
-                                                <td>2,009</td>
-                                                <td>2,901</td>
-                                                <td>9.01% <i class="zmdi zmdi-trending-up text-success"></i></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Australia</td>
-                                                <td>954</td>
-                                                <td>901</td>
-                                                <td>5.71% <i class="zmdi zmdi-trending-down text-warning"></i></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Germany</td>
-                                                <td>594</td>
-                                                <td>500</td>
-                                                <td>6.11% <i class="zmdi zmdi-trending-down text-warning"></i></td>
-                                            </tr>
-                                            <tr>
-                                                <td>UK</td>
-                                                <td>1,500</td>
-                                                <td>1,971</td>
-                                                <td>8.50% <i class="zmdi zmdi-trending-up text-success"></i></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Other</td>
-                                                <td>4,236</td>
-                                                <td>4,591</td>
-                                                <td>9.15% <i class="zmdi zmdi-trending-up text-success"></i></td>
-                                            </tr>                                            											
-                                        </tbody>
-                                    </table>                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row clearfix">
-            <div class="col-xl-4 col-lg-5 col-md-12">
-                <div class="card member-card">
-                    <div class="header l-blue">
-                        <h4 class="m-t-0">Matthew Deo</h4>
-                        <p>Top Coustomer</p>
-                    </div>
-                    <div class="member-img">
-                        <a href="profile.html" class="">
-                            <img class="rounded-circle" src="assets/images/lg/avatar3.jpg"  alt="profile-image">
-                        </a>
-                    </div>
-                    <div class="body">
-                        <div class="col-12">
-                            <ul class="social-links list-unstyled">
-                                <li>
-                                    <a title="facebook" href="javascript:void(0);">
-                                    <i class="zmdi zmdi-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a title="twitter" href="javascript:void(0);">
-                                    <i class="zmdi zmdi-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a title="instagram" href="3">
-                                    <i class="zmdi zmdi-instagram"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco,<br> CADGE 94107</p>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-4">
-                                <h5>98</h5>
-                                <small>Item Buy</small>
-                            </div>
-                            <div class="col-4">
-                                <h5>78</h5>
-                                <small>Mobile</small>
-                            </div>
-                            <div class="col-4">
-                                <h5>$246</h5>
-                                <small>Spent</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-8 col-lg-7 col-md-12">
-                <div class="card">
-                    <div class="header">
-                        <h2>New Customer Ratings </h2>
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more-vert"></i> </a>
-                                <ul class="dropdown-menu slideUp ">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="body">
-                        <ul class="row list-unstyled c_review">
-                            <li class="col-12">
-                                <div class="avatar">
-                                    <a href="javascript:void(0);"><img class="rounded" src="assets/images/xs/avatar2.jpg" alt="user" width="60"></a>
-                                </div>                                
-                                <div class="comment-action">
-                                    <h5 class="c_name">Hossein Shams</h5>
-                                    <p class="c_msg m-b-0">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. </p>
-                                    <div class="badge badge-primary">iPhone 8</div>
-                                    <span class="m-l-10">
-                                        <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                        <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                        <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                        <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                        <a href="javascript:void(0);"><i class="zmdi zmdi-star-outline text-muted"></i></a>
-                                    </span>
-                                    <small class="comment-date float-sm-right">Dec 21, 2017</small>
-                                </div>                                
-                            </li>
-                            <li class="col-12">
-                                <div class="avatar">
-                                    <a href="javascript:void(0);"><img class="rounded" src="assets/images/xs/avatar3.jpg" alt="user" width="60"></a>
-                                </div>                                
-                                <div class="comment-action">
-                                    <h5 class="c_name">Tim Hank</h5>
-                                    <p class="c_msg m-b-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
-                                    <div class="badge badge-primary">Nokia 8</div>
-                                    <span class="m-l-10">
-                                        <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                        <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                        <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                        <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                        <a href="javascript:void(0);"><i class="zmdi zmdi-star-outline text-muted"></i></a>
-                                    </span>
-                                    <small class="comment-date float-sm-right">Dec 18, 2017</small>
-                                </div>                                
-                            </li>
-                            <li class="col-12">
-                                <div class="avatar">
-                                    <a href="javascript:void(0);"><img class="rounded" src="assets/images/xs/avatar4.jpg" alt="user" width="60"></a>
-                                </div>                                
-                                <div class="comment-action">
-                                    <h5 class="c_name">Maryam Amiri</h5>
-                                    <p class="c_msg m-b-0">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,</p>
-                                    <div class="badge badge-primary">Samsung Galaxy S8</div>
-                                    <span class="m-l-10">
-                                        <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                        <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                        <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                        <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                        <a href="javascript:void(0);"><i class="zmdi zmdi-star-outline text-muted"></i></a>
-                                    </span>
-                                    <small class="comment-date float-sm-right">Dec 18, 2017</small>
-                                </div>                                
-                            </li>
-                            <li class="col-12">
-                                <div class="avatar">
-                                    <a href="javascript:void(0);"><img class="rounded" src="assets/images/xs/avatar5.jpg" alt="user" width="60"></a>
-                                </div>                                
-                                <div class="comment-action">
-                                    <h5 class="c_name">Gary Camara</h5>
-                                    <p class="c_msg m-b-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                                    <div class="badge badge-primary">HTC U11</div>
-                                    <span class="m-l-10">
-                                        <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                        <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                        <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                        <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                        <a href="javascript:void(0);"><i class="zmdi zmdi-star-outline text-muted"></i></a>
-                                    </span>
-                                    <small class="comment-date float-sm-right">Dec 13, 2017</small>
-                                </div>                                
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row clearfix">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-                <div class="card">
-                    <div class="header">
-                        <h2>Recent Orders </h2>
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more-vert"></i> </a>
-                                <ul class="dropdown-menu slideUp ">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="body table-responsive members_profiles">
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th style="width:60px;">#</th>
-                                    <th>Name</th>
-                                    <th>Item</th>
-                                    <th>Address</th>
-                                    <th>Quantity</th>                                    
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><img src="http://via.placeholder.com/60x40" alt="Product img"></td>
-                                    <td>Hossein</td>
-                                    <td>IPONE-7</td>
-                                    <td>Porterfield 508 Virginia Street Chicago, IL 60653</td>
-                                    <td>3</td>
-                                    <td><span class="badge badge-success">DONE</span></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="http://via.placeholder.com/60x40" alt="Product img"></td>
-                                    <td>Camara</td>
-                                    <td>NOKIA-8</td>
-                                    <td>2595 Pearlman Avenue Sudbury, MA 01776 </td>
-                                    <td>3</td>
-                                    <td><span class="badge badge-success">DONE</span></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="http://via.placeholder.com/60x40" alt="Product img"></td>
-                                    <td>Maryam</td>
-                                    <td>NOKIA-456</td>
-                                    <td>Porterfield 508 Virginia Street Chicago, IL 60653</td>
-                                    <td>4</td>
-                                    <td><span class="badge badge-success">DONE</span></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="http://via.placeholder.com/60x40" alt="Product img"></td>
-                                    <td>Micheal</td>
-                                    <td>SAMSANG PRO</td>
-                                    <td>508 Virginia Street Chicago, IL 60653</td>
-                                    <td>1</td>
-                                    <td><span class="badge badge-success">DONE</span></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="http://via.placeholder.com/60x40" alt="Product img"></td>
-                                    <td>Frank</td>
-                                    <td>NOKIA-456</td>
-                                    <td>1516 Holt Street West Palm Beach, FL 33401</td>
-                                    <td>13</td>
-                                    <td><span class="badge badge-warning">PENDING</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>       
-        <div class="row clearfix">
             <div class="col-lg-12">
                 <div class="card">
                     <div class="body">
-                        <p class="m-b-0">© 2017 Nexa Admin by <a href="http://thememakker.com/" target="black">ThemeMakker</a> </p>
+                        <div class="row">
+                            <div class="preview col-lg-4 col-md-12">
+                                <div class="preview-pic tab-content">
+                                    <div class="tab-pane active" id="product_1"><img src="assets/images/ecommerce/1.png" class="img-fluid" /></div>
+                                    <div class="tab-pane" id="product_2"><img src="assets/images/ecommerce/2.png" class="img-fluid"/></div>
+                                    <div class="tab-pane" id="product_3"><img src="assets/images/ecommerce/3.png" class="img-fluid"/></div>
+                                    <div class="tab-pane" id="product_4"><img src="assets/images/ecommerce/4.png" class="img-fluid"/></div>
+                                    <div class="tab-pane" id="product_5"><img src="assets/images/ecommerce/5.png" class="img-fluid"/></div>
+                                </div>
+                                <ul class="preview-thumbnail nav nav-tabs">
+                                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#product_1"><img src="assets/images/ecommerce/1.png" /></a></li>
+                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#product_2"><img src="assets/images/ecommerce/2.png" /></a></li>
+                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#product_3"><img src="assets/images/ecommerce/3.png" /></a></li>
+                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#product_4"><img src="assets/images/ecommerce/4.png" /></a></li>
+                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#product_5"><img src="assets/images/ecommerce/5.png" /></a></li>
+                                    
+                                </ul>                
+                            </div>
+                            <div class="details col-lg-8 col-md-12">
+                                <h3 class="product-title">Simple Black Clock</h3>
+                                <h4 class="price">Current Price: <span class="col-amber">$180</span></h4>
+                                <div class="rating">
+                                    <div class="stars">
+                                        <span class="zmdi zmdi-star col-amber"></span>
+                                        <span class="zmdi zmdi-star col-amber"></span>
+                                        <span class="zmdi zmdi-star col-amber"></span>
+                                        <span class="zmdi zmdi-star col-amber"></span>
+                                        <span class="zmdi zmdi-star-outline"></span>
+                                    </div>
+                                    <span class="m-l-10">41 reviews</span>
+                                </div>
+                                <hr>
+                                <p class="product-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <p class="vote"><strong>78%</strong> of buyers enjoyed this product! <strong>(23 votes)</strong></p>
+                                <h5 class="sizes">sizes:
+                                    <span class="size" title="small">s</span>
+                                    <span class="size" title="medium">m</span>
+                                    <span class="size" title="large">l</span>
+                                    <span class="size" title="xtra large">xl</span>
+                                </h5>
+                                <h5 class="colors">colors:
+                                    <span class="color bg-amber not-available"  title="Not In store"></span>
+                                    <span class="color bg-green"></span>
+                                    <span class="color bg-blue"></span>
+                                </h5>
+                                <hr>
+                                <div class="action">
+                                    <button class="btn btn-raised btn-default waves-effect" type="button">add to cart</button>
+                                    <button class="btn btn-raised btn-primary waves-effect" type="button"><span class="zmdi zmdi-favorite"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="body">                        
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#description">Description</a></li>
+                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#review">Review</a></li>
+                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#about">About</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="description">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                            </div>
+                            <div class="tab-pane" id="review">
+                                <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied</p>
+                                <ul class="row list-unstyled c_review">
+                                    <li class="col-12">
+                                        <div class="avatar">
+                                            <a href="javascript:void(0);"><img class="rounded" src="assets/images/xs/avatar2.jpg" alt="user" width="60"></a>
+                                        </div>                                
+                                        <div class="comment-action">
+                                            <h5 class="c_name">Hossein Shams</h5>
+                                            <p class="c_msg m-b-0">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. </p>
+                                            <div class="badge badge-primary">iPhone 8</div>
+                                            <span class="m-l-10">
+                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
+                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
+                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
+                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
+                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star-outline text-muted"></i></a>
+                                            </span>
+                                            <small class="comment-date float-sm-right">Dec 21, 2017</small>
+                                        </div>                                
+                                    </li>
+                                    <li class="col-12">
+                                        <div class="avatar">
+                                            <a href="javascript:void(0);"><img class="rounded" src="assets/images/xs/avatar3.jpg" alt="user" width="60"></a>
+                                        </div>                                
+                                        <div class="comment-action">
+                                            <h5 class="c_name">Tim Hank</h5>
+                                            <p class="c_msg m-b-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
+                                            <div class="badge badge-primary">Nokia 8</div>
+                                            <span class="m-l-10">
+                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
+                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
+                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
+                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
+                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star-outline text-muted"></i></a>
+                                            </span>
+                                            <small class="comment-date float-sm-right">Dec 18, 2017</small>
+                                        </div>                                
+                                    </li>                                   
+                                </ul>
+                            </div>
+                            <div class="tab-pane" id="about">
+                                <h6>Where does it come from?</h6>
+                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div>   
 </section>
 <!-- Jquery Core Js --> 
 <script src="assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
 <script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
 
-<script src="assets/bundles/jvectormap.bundle.js"></script> <!-- JVectorMap Plugin Js -->
-<script src="assets/bundles/morrisscripts.bundle.js"></script><!-- Morris Plugin Js -->
-<script src="assets/bundles/sparkline.bundle.js"></script> <!-- Sparkline Plugin Js -->
-<script src="assets/bundles/knob.bundle.js"></script> <!-- Jquery Knob Plugin Js -->
-
-<script src="assets/bundles/mainscripts.bundle.js"></script>
-<script src="assets/js/pages/ecommerce.js"></script>
-<script src="assets/js/pages/charts/jquery-knob.min.js"></script>
+<script src="assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js --> 
 </body>
 </html>

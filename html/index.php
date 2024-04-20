@@ -259,7 +259,7 @@
               <li><a href="dashboard-rtl.html">RTL Dashboard</a></li>
               <li><a href="index2.html">Horizontal Menu</a></li>
               <li><a href="blog-dashboard.html">Blog Dashboard</a></li>
-              <li><a href="ec-dashboard.html">Ecommerce Dashboard</a></li>
+              <li><a href="ec-dashboard.php">Ecommerce Dashboard</a></li>
               <li><a href="iot-dashboard.html">Iot Dashboard</a></li>
             </ul>
           </li>
@@ -275,10 +275,10 @@
           <li>
             <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-shopping-cart"></i><span>Ecommerce</span> </a>
             <ul class="ml-menu">
-              <li><a href="ec-dashboard.html">Dashboard</a></li>
-              <li><a href="ec-product.html">Product</a></li>
-              <li><a href="ec-product-List.html">Product List</a></li>
-              <li><a href="ec-product-detail.html">Product detail</a></li>
+              <li><a href="ec-dashboard.php">Dashboard</a></li>
+              <li><a href="ec-product.php">Product</a></li>
+              <li><a href="ec-product-List.php">Product List</a></li>
+              <li><a href="ec-product-detail.php">Product detail</a></li>
             </ul>
           </li>
           <li>
@@ -383,37 +383,6 @@
               <li><a href="yandex.html">YandexMap</a></li>
               <li><a href="jvectormap.html">jVectorMap</a></li>
             </ul>
-          </li>
-          <li>
-            <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-trending-down"></i><span>Multi Level Menu</span> </a>
-            <ul class="ml-menu">
-              <li>
-                <a href="javascript:void(0);"> <span>Menu Item</span> </a>
-              </li>
-              <li>
-                <a href="javascript:void(0);"> <span>Menu Item - 2</span> </a>
-              </li>
-              <li>
-                <a href="javascript:void(0);" class="menu-toggle"> <span>Level - 2</span> </a>
-                <ul class="ml-menu">
-                  <li>
-                    <a href="javascript:void(0);"> <span>Menu Item</span> </a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0);" class="menu-toggle"> <span>Level - 3</span> </a>
-                    <ul class="ml-menu">
-                      <li>
-                        <a href="javascript:void(0);"> <span>Level - 4</span> </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="changelogs.html"><i class="zmdi zmdi-time-restore"></i><span>Changelogs</span> </a>
-          </li>
           <li class="header">LABELS</li>
           <li>
             <a href="javascript:void(0);"><i class="zmdi zmdi-chart-donut col-red"></i><span>Important</span> </a>

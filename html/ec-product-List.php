@@ -1,20 +1,12 @@
-﻿<!doctype html>
+﻿<?php
+    include 'koneksi.php';
+    ?>
+<!doctype html>
 <html class="no-js " lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-<meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
-
-<title>:: Nexa :: EC Product Detail</title>
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<!-- Favicon-->
-<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-<!-- Custom Css -->
-<link rel="stylesheet" href="assets/css/main.css">
-<link rel="stylesheet" href="assets/css/ecommerce.css">
-<link rel="stylesheet" href="assets/css/color_skins.css">
-</head>
+<?php
+    include 'header.php';
+    ?>
+    
 <body class="theme-orange">
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
@@ -40,7 +32,7 @@
         
         <div class="navbar-header">
             <a href="javascript:void(0);" class="bars"></a>
-            <a class="navbar-brand" href="index.html">Nexa</a>
+            <a class="navbar-brand" href="index.php">Nexa</a>
         </div>
 
         <ul class="nav navbar-nav navbar-left">
@@ -203,11 +195,11 @@
             <li class="header">MAIN NAVIGATION</li>
             <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a>
                 <ul class="ml-menu">
-                    <li><a href="index.html">Main Dashboard</a></li>
+                    <li><a href="index.php">Main Dashboard</a></li>
                     <li><a href="dashboard-rtl.html">RTL Dashboard</a></li>
-                    <li><a href="index2.html">Horizontal Menu</a></li>
+                    <li><a href="index2.php">Horizontal Menu</a></li>
                     <li><a href="blog-dashboard.html">Blog Dashboard</a></li>
-                    <li><a href="ec-dashboard.html">Ecommerce Dashboard</a></li>
+                    <li><a href="ec-dashboard.php">Ecommerce Dashboard</a></li>
                     <li><a href="iot-dashboard.html">Iot Dashboard</a></li>                        
                 </ul>
             </li>
@@ -216,10 +208,10 @@
             <li><a href="blog-dashboard.html"><i class="zmdi zmdi-blogger"></i><span>Blogger</span> </a></li>
             <li class="active open"><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-shopping-cart"></i><span>Ecommerce</span> </a>
                 <ul class="ml-menu">
-                    <li><a href="ec-dashboard.html">Dashboard</a></li>
-                    <li><a href="ec-product.html">Product</a></li>
-                    <li><a href="ec-product-List.html">Product List</a></li>
-                    <li class="active"><a href="ec-product-detail.html">Product detail</a></li>
+                    <li><a href="ec-dashboard.php">Dashboard</a></li>
+                    <li><a href="ec-product.php">Product</a></li>
+                    <li class="active"><a href="ec-product-List.php">Product List</a></li>
+                    <li><a href="ec-product-detail.php">Product detail</a></li>
                 </ul>
             </li>
             <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-swap-alt"></i><span>User Interface (UI)</span> </a>
@@ -646,15 +638,15 @@
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
-                <h2>Product Detail
+                <h2>Product List
                 <small class="text-muted">Welcome to Nexa Application</small>
                 </h2>
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12">
                 <ul class="breadcrumb float-md-right">
-                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Nexa</a></li>
-                    <li class="breadcrumb-item"><a href="ec-dashboard.html">eCommerce</a></li>
-                    <li class="breadcrumb-item active">Product Detail</li>
+                    <li class="breadcrumb-item"><a href="index.php"><i class="zmdi zmdi-home"></i> Nexa</a></li>
+                    <li class="breadcrumb-item"><a href="ec-dashboard.php">eCommerce</a></li>
+                    <li class="breadcrumb-item active">Product List</li>
                 </ul>
             </div>
         </div>
@@ -662,123 +654,100 @@
     <div class="container-fluid">
         <div class="row clearfix">
             <div class="col-lg-12">
-                <div class="card">
-                    <div class="body">
-                        <div class="row">
-                            <div class="preview col-lg-4 col-md-12">
-                                <div class="preview-pic tab-content">
-                                    <div class="tab-pane active" id="product_1"><img src="assets/images/ecommerce/1.png" class="img-fluid" /></div>
-                                    <div class="tab-pane" id="product_2"><img src="assets/images/ecommerce/2.png" class="img-fluid"/></div>
-                                    <div class="tab-pane" id="product_3"><img src="assets/images/ecommerce/3.png" class="img-fluid"/></div>
-                                    <div class="tab-pane" id="product_4"><img src="assets/images/ecommerce/4.png" class="img-fluid"/></div>
-                                    <div class="tab-pane" id="product_5"><img src="assets/images/ecommerce/5.png" class="img-fluid"/></div>
-                                </div>
-                                <ul class="preview-thumbnail nav nav-tabs">
-                                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#product_1"><img src="assets/images/ecommerce/1.png" /></a></li>
-                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#product_2"><img src="assets/images/ecommerce/2.png" /></a></li>
-                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#product_3"><img src="assets/images/ecommerce/3.png" /></a></li>
-                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#product_4"><img src="assets/images/ecommerce/4.png" /></a></li>
-                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#product_5"><img src="assets/images/ecommerce/5.png" /></a></li>
-                                    
-                                </ul>                
-                            </div>
-                            <div class="details col-lg-8 col-md-12">
-                                <h3 class="product-title">Simple Black Clock</h3>
-                                <h4 class="price">Current Price: <span class="col-amber">$180</span></h4>
-                                <div class="rating">
-                                    <div class="stars">
-                                        <span class="zmdi zmdi-star col-amber"></span>
-                                        <span class="zmdi zmdi-star col-amber"></span>
-                                        <span class="zmdi zmdi-star col-amber"></span>
-                                        <span class="zmdi zmdi-star col-amber"></span>
-                                        <span class="zmdi zmdi-star-outline"></span>
-                                    </div>
-                                    <span class="m-l-10">41 reviews</span>
-                                </div>
-                                <hr>
-                                <p class="product-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                <p class="vote"><strong>78%</strong> of buyers enjoyed this product! <strong>(23 votes)</strong></p>
-                                <h5 class="sizes">sizes:
-                                    <span class="size" title="small">s</span>
-                                    <span class="size" title="medium">m</span>
-                                    <span class="size" title="large">l</span>
-                                    <span class="size" title="xtra large">xl</span>
-                                </h5>
-                                <h5 class="colors">colors:
-                                    <span class="color bg-amber not-available"  title="Not In store"></span>
-                                    <span class="color bg-green"></span>
-                                    <span class="color bg-blue"></span>
-                                </h5>
-                                <hr>
-                                <div class="action">
-                                    <button class="btn btn-raised btn-default waves-effect" type="button">add to cart</button>
-                                    <button class="btn btn-raised btn-primary waves-effect" type="button"><span class="zmdi zmdi-favorite"></span></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="body">                        
-                        <ul class="nav nav-tabs">
-                            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#description">Description</a></li>
-                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#review">Review</a></li>
-                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#about">About</a></li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="description">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                            </div>
-                            <div class="tab-pane" id="review">
-                                <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied</p>
-                                <ul class="row list-unstyled c_review">
-                                    <li class="col-12">
-                                        <div class="avatar">
-                                            <a href="javascript:void(0);"><img class="rounded" src="assets/images/xs/avatar2.jpg" alt="user" width="60"></a>
-                                        </div>                                
-                                        <div class="comment-action">
-                                            <h5 class="c_name">Hossein Shams</h5>
-                                            <p class="c_msg m-b-0">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. </p>
-                                            <div class="badge badge-primary">iPhone 8</div>
-                                            <span class="m-l-10">
-                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star-outline text-muted"></i></a>
-                                            </span>
-                                            <small class="comment-date float-sm-right">Dec 21, 2017</small>
-                                        </div>                                
-                                    </li>
-                                    <li class="col-12">
-                                        <div class="avatar">
-                                            <a href="javascript:void(0);"><img class="rounded" src="assets/images/xs/avatar3.jpg" alt="user" width="60"></a>
-                                        </div>                                
-                                        <div class="comment-action">
-                                            <h5 class="c_name">Tim Hank</h5>
-                                            <p class="c_msg m-b-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
-                                            <div class="badge badge-primary">Nokia 8</div>
-                                            <span class="m-l-10">
-                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star-outline text-muted"></i></a>
-                                            </span>
-                                            <small class="comment-date float-sm-right">Dec 18, 2017</small>
-                                        </div>                                
-                                    </li>                                   
-                                </ul>
-                            </div>
-                            <div class="tab-pane" id="about">
-                                <h6>Where does it come from?</h6>
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="card product_item_list">
+                    <div class="body table-responsive">
+                        <table class="table table-hover m-b-0">
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Product Name</th>
+                                    <th data-breakpoints="sm xs">Detail</th>
+                                    <th data-breakpoints="sm xs">Amount</th>
+                                    <th data-breakpoints="sm xs">Stock</th>
+                                    <th data-breakpoints="sm xs">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img src="assets/images/ecommerce/1.png" width="48" alt="Product img"></td>
+                                    <td><h5>Simple Black Clock</h5></td>
+                                    <td><span class="text-muted">randomised words even slightly believable</span></td>
+                                    <td>$16.00</td>
+                                    <td><span class="col-green">In Stock</span></td>
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-green"><i class="zmdi zmdi-edit"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-red"><i class="zmdi zmdi-delete"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="assets/images/ecommerce/10.png" width="48" alt="Product img"></td>
+                                    <td><h5>Brone Candle</h5></td>
+                                    <td><span class="text-muted">It is a long established  will be distracted</span></td>
+                                    <td>$15.00</td>
+                                    <td><span class="col-amber">Low Stock</span></td>
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-green"><i class="zmdi zmdi-edit"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-red"><i class="zmdi zmdi-delete"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="assets/images/ecommerce/11.png" width="48" alt="Product img"></td>
+                                    <td><h5>Wood Simple Clock</h5></td>
+                                    <td><span class="text-muted">There passages of Lorem Ipsum available</span></td>
+                                    <td>$16.00</td>
+                                    <td><span class="col-amber">Low Stock</span></td>
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-green"><i class="zmdi zmdi-edit"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-red"><i class="zmdi zmdi-delete"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="assets/images/ecommerce/5.png" width="48" alt="Product img"></td>
+                                    <td><h5>Unero Small Bag</h5></td>
+                                    <td><span class="text-muted">It is a long established fact that a distracted</span></td>
+                                    <td>$23.00</td>
+                                    <td><span class="col-red">Out Of Stock</span></td>
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-green"><i class="zmdi zmdi-edit"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-red"><i class="zmdi zmdi-delete"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="assets/images/ecommerce/6.png" width="48" alt="Product img"></td>
+                                    <td><h5>Simple Black Clock</h5></td>
+                                    <td><span class="text-muted">Contrary to popular belief, simply random text</span></td>
+                                    <td>$16.00</td>
+                                    <td><span class="col-green">In Stock</span></td>
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-green"><i class="zmdi zmdi-edit"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-red"><i class="zmdi zmdi-delete"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="assets/images/ecommerce/2.png" width="48" alt="Product img"></td>
+                                    <td><h5>Brone Lamp Glasses</h5></td>
+                                    <td><span class="text-muted">All the Lorem Ipsum generators on predefined chunks</span></td>
+                                    <td>$12.00</td>
+                                    <td><span class="col-green">In Stock</span></td>
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-green"><i class="zmdi zmdi-edit"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-red"><i class="zmdi zmdi-delete"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="assets/images/ecommerce/3.png" width="48" alt="Product img"></td>
+                                    <td><h5>Simple Black Clock</h5></td>
+                                    <td><span class="text-muted">established fact that a be distracted</span></td>
+                                    <td>$22.00</td>
+                                    <td><span class="col-red">Out Of Stock</span></td>
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-green"><i class="zmdi zmdi-edit"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-red"><i class="zmdi zmdi-delete"></i></a>
+                                    </td>
+                                </tr>        
+                            </tbody>
+                        </table>
+                    </div>        
                 </div>
             </div>
         </div>
@@ -788,6 +757,9 @@
 <script src="assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
 <script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
 
-<script src="assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js --> 
+<script src="assets/bundles/footable.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
+
+<script src="assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js -->
+<script src="assets/js/pages/tables/footable.js"></script><!-- Custom Js --> 
 </body>
 </html>
