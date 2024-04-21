@@ -310,23 +310,7 @@
                     <li><a href="jvectormap.html">jVectorMap</a></li>
                 </ul>
             </li>
-            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-trending-down"></i><span>Multi Level Menu</span> </a>
-                <ul class="ml-menu">
-                    <li><a href="javascript:void(0);"> <span>Menu Item</span> </a></li>
-                    <li><a href="javascript:void(0);"> <span>Menu Item - 2</span> </a></li>
-                    <li><a href="javascript:void(0);" class="menu-toggle"> <span>Level - 2</span> </a>
-                        <ul class="ml-menu">
-                            <li><a href="javascript:void(0);"> <span>Menu Item</span> </a></li>
-                            <li><a href="javascript:void(0);" class="menu-toggle"> <span>Level - 3</span> </a>
-                                <ul class="ml-menu">
-                                    <li><a href="javascript:void(0);"> <span>Level - 4</span> </a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="changelogs.html"><i class="zmdi zmdi-time-restore"></i><span>Changelogs</span> </a></li>
+            
             <li class="header">LABELS</li>
             <li><a href="javascript:void(0);"><i class="zmdi zmdi-chart-donut col-red"></i><span>Important</span> </a></li>
             <li><a href="javascript:void(0);"><i class="zmdi zmdi-chart-donut col-amber"></i><span>Warning</span> </a></li>
@@ -638,7 +622,7 @@
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
                 <h2>Product
-                <small class="text-muted">Welcome to Nexa Application</small>
+                <small class="text-muted">Welcome to Indo April</small>
                 </h2>
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12">
@@ -676,7 +660,7 @@
                 <div class="card product_item">
                     <div class="body">
                         <div class="cp_img">
-                            <img src="assets/images/ecommerce/Product2.png" alt="Product" class="img-fluid" />
+                            <img src="assets/images/ecommerce/Product2.jpg.webp" alt="Product" class="img-fluid" />
                             <div class="hover">
                                 <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-plus"></i></a>
                                 <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-shopping-cart"></i></a>
@@ -696,7 +680,7 @@
                 <div class="card product_item">
                     <div class="body">
                         <div class="cp_img">
-                            <img src="assets/images/ecommerce/Product3.png  " alt="Product" class="img-fluid" />
+                            <img src="assets/images/ecommerce/Product3.png" alt="Product" class="img-fluid" />
                             <div class="hover">
                                 <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-plus"></i></a>
                                 <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-shopping-cart"></i></a>
@@ -736,17 +720,17 @@
                 <div class="card product_item">
                     <div class="body">
                         <div class="cp_img">
-                            <img src="assets/images/ecommerce/5.png" alt="Product" class="img-fluid" />
+                            <img src="assets/images/ecommerce/product5.png" alt="Product" class="img-fluid" />
                             <div class="hover">
                                 <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-plus"></i></a>
                                 <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-shopping-cart"></i></a>
                             </div>
                         </div>
                         <div class="product_details">
-                            <h5><a href="ec-product-detail.php">Brone Lamp Glasses</a></h5>
+                            <h5><a href="ec-product-detail.php">Coca Cola</a></h5>
                             <ul class="product_price list-unstyled">
-                                <li class="old_price">$18.00</li>
-                                <li class="new_price">$15.00</li>
+                                <li class="old_price">Rp 10.000</li>
+                                <li class="new_price">Rp 15.000</li>
                             </ul>
                         </div>
                     </div>
@@ -756,17 +740,17 @@
                 <div class="card product_item">
                     <div class="body">
                         <div class="cp_img">
-                            <img src="assets/images/ecommerce/14.png" alt="Product" class="img-fluid" />
+                            <img src="assets/images/ecommerce/product6.png" alt="Product" class="img-fluid" />
                             <div class="hover">
                                 <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-plus"></i></a>
                                 <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-shopping-cart"></i></a>
                             </div>
                         </div>
                         <div class="product_details">
-                            <h5><a href="ec-product-detail.php">Unero Small Bag</a></h5>
+                            <h5><a href="ec-product-detail.php">Sprite</a></h5>
                             <ul class="product_price list-unstyled">
-                                <li class="old_price">$21.00</li>
-                                <li class="new_price">$17.00</li>
+                                <li class="old_price">Rp 7.000</li>
+                                <li class="new_price">Rp 12.000</li>
                             </ul>
                         </div>
                     </div>
@@ -776,17 +760,17 @@
                 <div class="card product_item">
                     <div class="body">
                         <div class="cp_img">
-                            <img src="assets/images/ecommerce/7.png" alt="Product" class="img-fluid" />
+                            <img src="assets/images/ecommerce/product7.png" alt="Product" class="img-fluid" />
                             <div class="hover">
                                 <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-plus"></i></a>
                                 <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-shopping-cart"></i></a>
                             </div>
                         </div>
                         <div class="product_details">
-                            <h5><a href="ec-product-detail.php">Unero Round Sunglass</a></h5>
+                            <h5><a href="ec-product-detail.php">Fanta</a></h5>
                             <ul class="product_price list-unstyled">
-                                <li class="old_price">$16.00</li>
-                                <li class="new_price">$10.00</li>
+                                <li class="old_price">Rp 10.000</li>
+                                <li class="new_price">Rp 13.000</li>
                             </ul>
                         </div>
                     </div>
@@ -796,17 +780,17 @@
                 <div class="card product_item">
                     <div class="body">
                         <div class="cp_img">
-                            <img src="assets/images/ecommerce/8.png" alt="Product" class="img-fluid" />
+                            <img src="assets/images/ecommerce/product8.png" alt="Product" class="img-fluid" />
                             <div class="hover">
                                 <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-plus"></i></a>
                                 <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-shopping-cart"></i></a>
                             </div>
                         </div>
                         <div class="product_details">
-                            <h5><a href="ec-product-detail.php">Wood Simple Clock</a></h5>
+                            <h5><a href="ec-product-detail.php">Pepsi</a></h5>
                             <ul class="product_price list-unstyled">
-                                <li class="old_price">$16.00</li>
-                                <li class="new_price">$10.00</li>
+                                <li class="old_price">Rp 11.000</li>
+                                <li class="new_price">Rp 14.000</li>
                             </ul>
                         </div>
                     </div>

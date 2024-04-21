@@ -311,23 +311,8 @@
                     <li><a href="jvectormap.html">jVectorMap</a></li>
                 </ul>
             </li>
-            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-trending-down"></i><span>Multi Level Menu</span> </a>
-                <ul class="ml-menu">
-                    <li><a href="javascript:void(0);"> <span>Menu Item</span> </a></li>
-                    <li><a href="javascript:void(0);"> <span>Menu Item - 2</span> </a></li>
-                    <li><a href="javascript:void(0);" class="menu-toggle"> <span>Level - 2</span> </a>
-                        <ul class="ml-menu">
-                            <li><a href="javascript:void(0);"> <span>Menu Item</span> </a></li>
-                            <li><a href="javascript:void(0);" class="menu-toggle"> <span>Level - 3</span> </a>
-                                <ul class="ml-menu">
-                                    <li><a href="javascript:void(0);"> <span>Level - 4</span> </a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="changelogs.html"><i class="zmdi zmdi-time-restore"></i><span>Changelogs</span> </a></li>
+           
+            
             <li class="header">LABELS</li>
             <li><a href="javascript:void(0);"><i class="zmdi zmdi-chart-donut col-red"></i><span>Important</span> </a></li>
             <li><a href="javascript:void(0);"><i class="zmdi zmdi-chart-donut col-amber"></i><span>Warning</span> </a></li>
