@@ -466,8 +466,11 @@
                                 echo "<td>".$product['jumlah']."</td>";
                                 echo "<td><span class='col-green'>".$product['price'] * $product['jumlah'] . "</span></td>";
                                 echo "<td>
-                                        <a href='javascript:void(0);' class='btn btn-default waves-effect waves-float waves-green'><i class='zmdi zmdi-edit'></i></a>
-                                        <a href='javascript:void(0);' class='btn btn-default waves-effect waves-float waves-red'><i class='zmdi zmdi-delete'></i></a>
+                                <form method='POST' action='ec-product-delete-cart.php' onsubmit=\"return confirm('Hapus Pesanan?')\"> 
+                                 <input type='hidden' name='id' value='".$id."'>
+                                <button type='submit' class='btn btn-default waves-effect waves-float waves-red' name='delete'><i class='zmdi zmdi-delete'></i></button>
+                                 </form>
+                                       
                                     </td>";
                                 echo "</tr>"; 
                             }
