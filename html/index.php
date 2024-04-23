@@ -204,7 +204,7 @@
             </ul>
           </li>
           <li>
-            <a href="sign-in.html" class="mega-menu xs-hide" data-close="true"><i class="zmdi zmdi-power"></i></a>
+            <a href="sign-in.php" class="mega-menu xs-hide" data-close="true"><i class="zmdi zmdi-power"></i></a>
           </li>
           <li>
             <a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a>
@@ -240,7 +240,7 @@
               </li>
               <li class="divider"></li>
               <li>
-                <a href="sign-in.html"><i class="material-icons">input</i>Sign Out</a>
+                <a href="sign-in.php"><i class="material-icons">input</i>Sign Out</a>
               </li>
             </ul>
           </div>
@@ -302,7 +302,7 @@
           <li>
             <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-lock"></i><span>Authentication</span> </a>
             <ul class="ml-menu">
-              <li><a href="sign-in.html">Sign In</a></li>
+              <li><a href="sign-in.php">Sign In</a></li>
               <li><a href="sign-up.html">Sign Up</a></li>
               <li><a href="forgot-password.html">Forgot Password</a></li>
               <li><a href="404.html">Page 404</a></li>
