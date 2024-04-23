@@ -1,11 +1,16 @@
 ﻿<?php
     include 'koneksi.php';
+    $_query= "SELECT * FROM shoppingcart";
+    $_shoppingcart= mysqli_query($koneksi, $_query);
+    $_cartresult= mysqli_fetch_all($_shoppingcart, MYSQLI_ASSOC);
     ?>
 <!doctype html>
 <html class="no-js " lang="en">
 <?php
     include 'header.php';
     ?>
+
+
     
 <body class="theme-orange">
 <!-- Page Loader -->
@@ -451,7 +456,7 @@
                             <tbody>
                                 <tr>
                                     <td><img src="assets/images/ecommerce/1.png" width="48" alt="Product img"></td>
-                                    <td><h5>Simple Black Clock</h5></td>
+                                    <td><h5><?php $_cartresult['cartid'] ?></h5> </td>
                                     <td><span class="text-muted">randomised words even slightly believable</span></td>
                                     <td>$16.00</td>
                                     <td><span class="col-green">In Stock</span></td>
