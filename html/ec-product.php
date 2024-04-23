@@ -1,6 +1,9 @@
 ﻿<?php
+session_start();
     include 'koneksi.php';
+    
     ?>
+    
 <!doctype html>
 <html class="no-js " lang="en">
 <?php
@@ -435,246 +438,44 @@
         
     <div class="container-fluid">
         <div class="row clearfix">
+
+
+        <?php
+        $query = mysqli_query($koneksi, "SELECT * FROM produk");
+        while ($data = mysqli_fetch_array($query)){
+        ?>
+        
             <div class="col-lg-3 col-md-4 col-sm-12">
                 <div class="card product_item">
                     <div class="body">
                         <div class="cp_img">
-                            <img src="assets/images/ecommerce/product1.png" alt="Product" class="img-fluid" />
+                            <img src="assets/images/ecommerce/<?php echo $data['Gambar_ProductID']; ?>" alt="Product" class="img-fluid" />
                             <div class="hover">
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-plus"></i></a>
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-shopping-cart"></i></a>
+                                <form method="post" action="ec-product-add.php">  
+                                    <input type="hidden" name= "produk" value="<?php echo $data['ProductID'];?>"> 
+                              
+                            
+                            <button class="btn btn-cart btn-sm waves-effect waves-light" type="submit" name="add" value="bro"><i class="mdi mdi-cart mr-1"></i> Add To Cart</button>
+                           
+                                    
+                                </form>
                             </div>
                         </div>
                         <div class="product_details">
-                            <h5><a href="ec-product-detail.php">Fruit Tea</a></h5>
+                            <h5><a href="ec-product-detail.php"> <?php echo $data['Nama_Product']; ?></a></h5>
                             <ul class="product_price list-unstyled">
-                                <li class="old_price">Rp 3000</li>
-                                <li class="new_price">Rp 7000</li>
+                                <li class="old_price">Rp <?php echo $data['Harga_Beli']; ?></li>
+                                <li class="new_price">Rp <?php echo $data['Harga_Jual']; ?></li>
                             </ul>
                         </div>
                     </div>
                 </div>                
+            </div> 
+            <?php 
+        }
+        ?>          
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-12">
-                <div class="card product_item">
-                    <div class="body">
-                        <div class="cp_img">
-                            <img src="assets/images/ecommerce/Product2.jpg.webp" alt="Product" class="img-fluid" />
-                            <div class="hover">
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-plus"></i></a>
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-shopping-cart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product_details">
-                            <h5><a href="ec-product-detail.php">Pocari Sweat</a></h5>
-                            <ul class="product_price list-unstyled">
-                                <li class="old_price">Rp 10.000</li>
-                                <li class="new_price">Rp 17.000</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>                
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-12">
-                <div class="card product_item">
-                    <div class="body">
-                        <div class="cp_img">
-                            <img src="assets/images/ecommerce/Product3.png" alt="Product" class="img-fluid" />
-                            <div class="hover">
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-plus"></i></a>
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-shopping-cart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product_details">
-                            <h5><a href="ec-product-detail.php">Mizone</a></h5>
-                            <ul class="product_price list-unstyled">
-                                <li class="old_price">Rp 15.000</li>
-                                <li class="new_price">Rp 20.000</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>                
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-12">
-                <div class="card product_item">
-                    <div class="body">
-                        <div class="cp_img">
-                            <img src="assets/images/ecommerce/Product4.jpg.webp" alt="Product" class="img-fluid" />
-                            <div class="hover">
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-plus"></i></a>
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-shopping-cart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product_details">
-                            <h5><a href="ec-product-detail.php">Isoplus</a></h5>
-                            <ul class="product_price list-unstyled">
-                                <li class="old_price">Rp 15.000</li>
-                                <li class="new_price">Rp 22.000</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>                
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-12">
-                <div class="card product_item">
-                    <div class="body">
-                        <div class="cp_img">
-                            <img src="assets/images/ecommerce/product5.png" alt="Product" class="img-fluid" />
-                            <div class="hover">
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-plus"></i></a>
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-shopping-cart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product_details">
-                            <h5><a href="ec-product-detail.php">Coca Cola</a></h5>
-                            <ul class="product_price list-unstyled">
-                                <li class="old_price">Rp 10.000</li>
-                                <li class="new_price">Rp 15.000</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>                
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-12">
-                <div class="card product_item">
-                    <div class="body">
-                        <div class="cp_img">
-                            <img src="assets/images/ecommerce/product6.png" alt="Product" class="img-fluid" />
-                            <div class="hover">
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-plus"></i></a>
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-shopping-cart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product_details">
-                            <h5><a href="ec-product-detail.php">Sprite</a></h5>
-                            <ul class="product_price list-unstyled">
-                                <li class="old_price">Rp 7.000</li>
-                                <li class="new_price">Rp 12.000</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>                
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-12">
-                <div class="card product_item">
-                    <div class="body">
-                        <div class="cp_img">
-                            <img src="assets/images/ecommerce/product7.png" alt="Product" class="img-fluid" />
-                            <div class="hover">
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-plus"></i></a>
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-shopping-cart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product_details">
-                            <h5><a href="ec-product-detail.php">Fanta</a></h5>
-                            <ul class="product_price list-unstyled">
-                                <li class="old_price">Rp 10.000</li>
-                                <li class="new_price">Rp 13.000</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>                
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-12">
-                <div class="card product_item">
-                    <div class="body">
-                        <div class="cp_img">
-                            <img src="assets/images/ecommerce/product8.png" alt="Product" class="img-fluid" />
-                            <div class="hover">
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-plus"></i></a>
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-shopping-cart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product_details">
-                            <h5><a href="ec-product-detail.php">Pepsi</a></h5>
-                            <ul class="product_price list-unstyled">
-                                <li class="old_price">Rp 11.000</li>
-                                <li class="new_price">Rp 14.000</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>                
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-12">
-                <div class="card product_item">
-                    <div class="body">
-                        <div class="cp_img">
-                            <img src="assets/images/ecommerce/9.png" alt="Product" class="img-fluid" />
-                            <div class="hover">
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-plus"></i></a>
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-shopping-cart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product_details">
-                            <h5><a href="ec-product-detail.php">Wood Long TV Board</a></h5>
-                            <ul class="product_price list-unstyled">
-                                <li class="old_price">$16.00</li>
-                                <li class="new_price">$10.00</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>                
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-12">
-                <div class="card product_item">
-                    <div class="body">
-                        <div class="cp_img">
-                            <img src="assets/images/ecommerce/10.png" alt="Product" class="img-fluid" />
-                            <div class="hover">
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-plus"></i></a>
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-shopping-cart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product_details">
-                            <h5><a href="ec-product-detail.php">Simple Black Clock</a></h5>
-                            <ul class="product_price list-unstyled">
-                                <li class="old_price">$16.00</li>
-                                <li class="new_price">$10.00</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>                
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-12">
-                <div class="card product_item">
-                    <div class="body">
-                        <div class="cp_img">
-                            <img src="assets/images/ecommerce/11.png" alt="Product" class="img-fluid" />
-                            <div class="hover">
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-plus"></i></a>
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-shopping-cart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product_details">
-                            <h5><a href="ec-product-detail.php">Wood Simple Chair V2</a></h5>
-                            <ul class="product_price list-unstyled">
-                                <li class="old_price">$16.00</li>
-                                <li class="new_price">$10.00</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>                
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-12">
-                <div class="card product_item">
-                    <div class="body">
-                        <div class="cp_img">
-                            <img src="assets/images/ecommerce/12.png" alt="Product" class="img-fluid" />
-                            <div class="hover">
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-plus"></i></a>
-                                <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float"><i class="zmdi zmdi-shopping-cart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product_details">
-                            <h5><a href="ec-product-detail.php">Simple Black Clock</a></h5>
-                            <ul class="product_price list-unstyled">
-                                <li class="old_price">$16.00</li>
-                                <li class="new_price">$10.00</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>                
-            </div>
+           
         </div>
     </div>   
 </section>

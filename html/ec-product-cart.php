@@ -1,7 +1,8 @@
 ﻿<?php
-    session_start(); 
     include 'koneksi.php';
-   
+    $_query= "SELECT * FROM shoppingcart";
+    $_shoppingcart= mysqli_query($koneksi, $_query);
+    $_cartresult= mysqli_fetch_all($_shoppingcart, MYSQLI_ASSOC);
     ?>
 <!doctype html>
 <html class="no-js " lang="en">
@@ -446,36 +447,35 @@
                                 <tr>
                                     <th>Image</th>
                                     <th>Product Name</th>
-                                    <th data-breakpoints="sm xs">Amount</th>
+                                    <th data-breakpoints="sm xs">Amount </th>
                                     <th data-breakpoints="sm xs">Quantity</th>
                                     <th data-breakpoints="sm xs">Total</th>
                                     <th data-breakpoints="sm xs">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php 
-                                if (!empty($_SESSION['shop'])){
+                                <?php 
+                                if (empty($_SESSION['shop'])){
                                     foreach ($_SESSION['shop'] as $id => $product) {
 
                                    
                                 echo "<tr>"; 
 
-                                echo "<td><img src='assets/images/ecommerce/1.png' width='48' alt='Product img'></td>";
-                                echo "<td> <h5> ".$product['name']." </h5> </td>"; 
-                                echo "<td><span class='text-muted'> ".$product['price']."</span></td>";
-                                echo "<td>".$product['jumlah']."</td>";
-                                echo "<td><span class='col-green'>".$product['price'] * $product['jumlah'] . "</span></td>";
+                                echo "<td><img src="assets/images/ecommerce/1.png" width="48" alt="Product img"></td>";
+                                echo "<td>";
+                                echo "<h5> Coca Cola </h5>";
+                                echo"</td>"; 
+                                echo "<td><span class="text-muted">randomised words even slightly believable</span></td>";
+                                echo "<td>$16.00</td>";
+                                echo "<td><span class="col-green">In Stock</span></td>";
                                 echo "<td>
-                                        <a href='javascript:void(0);' class='btn btn-default waves-effect waves-float waves-green'><i class='zmdi zmdi-edit'></i></a>
-                                        <a href='javascript:void(0);' class='btn btn-default waves-effect waves-float waves-red'><i class='zmdi zmdi-delete'></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-green"><i class="zmdi zmdi-edit"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-default waves-effect waves-float waves-red"><i class="zmdi zmdi-delete"></i></a>
                                     </td>";
                                 echo "</tr>"; 
                             }
                         }
                             ?>
-        
-        
-                                           
                             </tbody>
                         </table>
                     </div>        
