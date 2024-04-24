@@ -9,7 +9,9 @@
     include 'header.php';
     ?>
 
-
+<?php
+    include 'ec-product-add.php';
+    ?>
     
 <body class="theme-orange">
 <!-- Page Loader -->
@@ -423,13 +425,13 @@
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
-                <h2>Product List
-                <small class="text-muted">Welcome to Nexa Application</small>
+                <h2>Shopping Cart
+                <small class="text-muted">Welcome to IndoApril</small>
                 </h2>
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12">
                 <ul class="breadcrumb float-md-right">
-                    <li class="breadcrumb-item"><a href="index.php"><i class="zmdi zmdi-home"></i> Nexa</a></li>
+                    <li class="breadcrumb-item"><a href="index.php"><i class="zmdi zmdi-home"></i> IndoApril</a></li>
                     <li class="breadcrumb-item"><a href="ec-dashboard.php">eCommerce</a></li>
                     <li class="breadcrumb-item active">Product List</li>
                 </ul>
@@ -460,7 +462,7 @@
                                    
                                 echo "<tr>"; 
 
-                                echo "<td><img src='assets/images/ecommerce/1.png' width='48' alt='Product img'></td>";
+                                echo "<td><img src='assets/images/ecommerce/' width='48' alt='Product img'></td>";
                                 echo "<td> <h5> ".$product['name']." </h5> </td>"; 
                                 echo "<td><span class='text-muted'> ".$product['price']."</span></td>";
                                 echo "<td>".$product['jumlah']."</td>";

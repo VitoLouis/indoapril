@@ -428,7 +428,7 @@ session_start();
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12">
                 <ul class="breadcrumb float-md-right">
-                    <li class="breadcrumb-item"><a href="index.php"><i class="zmdi zmdi-home"></i> Nexa</a></li>
+                    <li class="breadcrumb-item"><a href="index.php"><i class="zmdi zmdi-home"></i> IndoApril</a></li>
                     <li class="breadcrumb-item"><a href="ec-dashboard.php">eCommerce</a></li>
                     <li class="breadcrumb-item active">Product</li>
                 </ul>
@@ -449,7 +449,7 @@ session_start();
                 <div class="card product_item">
                     <div class="body">
                         <div class="cp_img">
-                            <img src="assets/images/ecommerce/<?php echo $data['Gambar_ProductID']; ?>" alt="Product" class="img-fluid" />
+                            <img src="assets/images/ecommerce/<?php echo $data['GambarProduk']; ?>" alt="Product" class="img-fluid" />
                             <div class="hover">
                                 <form method="post" action="ec-product-add.php">  
                                     <input type="hidden" name= "produk" value="<?php echo $data['ProductID'];?>"> 
