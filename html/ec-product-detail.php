@@ -1,4 +1,5 @@
 ﻿<?php
+    session_start(); 
     include 'koneksi.php';
     ?>
 <!doctype html>
@@ -6,6 +7,285 @@
 <?php
     include 'header.php';
     ?>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+body,html {
+  height:100%;
+  margin:0;
+  font-family:lato;
+}
+
+h2 {
+  margin-bottom:0px;
+  margin-top:25px;
+  text-align:center;
+  font-weight:200;
+  font-size:19px;
+  font-size:1.2rem;
+  
+}
+.container {
+  height:100%;
+  -webkit-box-pack:center;
+  -webkit-justify-content:center;
+      -ms-flex-pack:center;
+          justify-content:center;
+  -webkit-box-align:center;
+  -webkit-align-items:center;
+      -ms-flex-align:center;
+          align-items:center;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  background:-webkit-linear-gradient(#c5e5e5, #ccddf9);
+  background:linear-gradient(#c9e5e9,#ccddf9);
+}
+.dropdown-select.visible {
+  display:block;
+}
+.dropdown {
+  position:relative;
+}
+ul {
+  margin:0;
+  padding:0;
+}
+ul li {
+  list-style:none;
+  padding-left:10px;
+  cursor:pointer;
+}
+ul li:hover {
+  background:rgba(255,255,255,0.1);
+}
+.dropdown-select {
+  position:absolute;
+  background:#77aaee;
+  text-align:left;
+  box-shadow:0px 3px 5px 0px rgba(0,0,0,0.1);
+  border-bottom-right-radius:5px;
+  border-bottom-left-radius:5px;
+  width:90%;
+  left:2px;
+  line-height:2em;
+  margin-top:2px;
+  box-sizing:border-box;
+}
+.thin {
+  font-weight:400;
+}
+.small {
+  font-size:12px;
+  font-size:.8rem;
+}
+.half-input-table {
+  border-collapse:collapse;
+  width:100%;
+}
+.half-input-table td:first-of-type {
+  border-right:10px solid #4488dd;
+  width:50%;
+}
+.window {
+  height:540px;
+  width:800px;
+  background:#fff;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, 0.2);
+  border-radius:30px;
+  z-index:10;
+}
+.order-info {
+  height:100%;
+  width:50%;
+  padding-left:25px;
+  padding-right:25px;
+  box-sizing:border-box;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-pack:center;
+  -webkit-justify-content:center;
+      -ms-flex-pack:center;
+          justify-content:center;
+  position:relative;
+}
+.price {
+  bottom:0px;
+  position:absolute;
+  right:0px;
+  color:#4488dd;
+}
+.order-table td:first-of-type {
+  width:25%;
+}
+.order-table {
+    position:relative;
+}
+.line {
+  height:1px;
+  width:100%;
+  margin-top:10px;
+  margin-bottom:10px;
+  background:#ddd;
+}
+.order-table td:last-of-type {
+  vertical-align:top;
+  padding-left:25px;
+}
+.order-info-content {
+  table-layout:fixed;
+
+}
+
+.full-width {
+  width:100%;
+}
+.pay-btn {
+  border:none;
+  background:#22b877;
+  line-height:2em;
+  border-radius:10px;
+  font-size:19px;
+  font-size:1.2rem;
+  color:#fff;
+  cursor:pointer;
+  position:absolute;
+  bottom:25px;
+  width:calc(100% - 50px);
+  -webkit-transition:all .2s ease;
+          transition:all .2s ease;
+}
+.pay-btn:hover {
+  background:#22a877;
+    color:#eee;
+  -webkit-transition:all .2s ease;
+          transition:all .2s ease;
+}
+
+.total {
+  margin-top:25px;
+  font-size:20px;
+  font-size:1.3rem;
+  position:absolute;
+  bottom:30px;
+  right:27px;
+  left:35px;
+}
+.dense {
+  line-height:1.2em;
+  font-size:16px;
+  font-size:1rem;
+}
+.input-field {
+  background:rgba(255,255,255,0.1);
+  margin-bottom:10px;
+  margin-top:3px;
+  line-height:1.5em;
+  font-size:20px;
+  font-size:1.3rem;
+  border:none;
+  padding:5px 10px 5px 10px;
+  color:#fff;
+  box-sizing:border-box;
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+}
+.credit-info {
+  background:#4488dd;
+  height:100%;
+  width:50%;
+  color:#eee;
+  -webkit-box-pack:center;
+  -webkit-justify-content:center;
+      -ms-flex-pack:center;
+          justify-content:center;
+  font-size:14px;
+  font-size:.9rem;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  box-sizing:border-box;
+  padding-left:25px;
+  padding-right:25px;
+  border-top-right-radius:30px;
+  border-bottom-right-radius:30px;
+  position:relative;
+}
+.dropdown-btn {
+  background:rgba(255,255,255,0.1);
+  width:100%;
+  border-radius:5px;
+  text-align:center;
+  line-height:1.5em;
+  cursor:pointer;
+  position:relative;
+  -webkit-transition:background .2s ease;
+          transition:background .2s ease;
+}
+.dropdown-btn:after {
+  content: '\25BE';
+  right:8px;
+  position:absolute;
+}
+.dropdown-btn:hover {
+  background:rgba(255,255,255,0.2);
+  -webkit-transition:background .2s ease;
+          transition:background .2s ease;
+}
+.dropdown-select {
+  display:none;
+}
+.credit-card-image {
+  display:block;
+  max-height:80px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:35px;
+  margin-bottom:15px;
+}
+.credit-info-content {
+  margin-top:25px;
+  -webkit-flex-flow:column;
+      -ms-flex-flow:column;
+          flex-flow:column;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  width:100%;
+}
+@media (max-width: 600px) {
+  .window {
+    width: 100%;
+    height: 100%;
+    display:block;
+    border-radius:0px;
+  }
+  .order-info {
+    width:100%;
+    height:auto;
+    padding-bottom:100px;
+    border-radius:0px;
+  }
+  .credit-info {
+    width:100%;
+    height:auto;
+    padding-bottom:100px;
+    border-radius:0px;
+  }
+  .pay-btn {
+    border-radius:0px;
+  }
+}
+    </style>
 <body class="theme-orange">
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
@@ -117,449 +397,114 @@
     <!-- #Menu --> 
 </aside>    
 <!-- Right Sidebar -->
-<aside id="rightsidebar" class="right-sidebar">
-    <ul class="nav nav-tabs">
-        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#skins">Skins</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#chat">Chat</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#settings">Setting</a></li>
-    </ul>
-    <div class="tab-content">
-        <div role="tabpanel" class="tab-pane in active in active slideRight" id="skins">
-            <div class="slim_scroll">
-                <h6>Flat Color</h6>
-                <ul class="choose-skin">                   
-                    <li data-theme="purple"><div class="purple"></div><span>Purple</span></li>
-                    <li data-theme="blue"><div class="blue"></div><span>Blue</span></li>
-                    <li data-theme="cyan"><div class="cyan"></div><span>Cyan</span></li>
-                </ul>                    
-                <h6>Multi Color</h6>
-                <ul class="choose-skin">                        
-                    <li data-theme="black"><div class="black"></div><span>Black</span></li>
-                    <li data-theme="deep-purple"><div class="deep-purple"></div><span>Deep Purple</span></li>
-                    <li data-theme="red"><div class="red"></div><span>Red</span></li>                        
-                </ul>                    
-                <h6>Gradient Color</h6>
-                <ul class="choose-skin">                    
-                    <li data-theme="green"><div class="green"></div><span>Green</span> </li>
-                    <li data-theme="orange" class="active"><div class="orange"></div><span>Orange</span></li>
-                    <li data-theme="blush"><div class="blush"></div><span>Blush</span></li>
-                </ul>
-            </div>                
-        </div>
-        <div role="tabpanel" class="tab-pane pullUp" id="chat">
-            <div class="right_chat slim_scroll">
-                <div class="search">
-                    <div class="input-group">
-                        <div class="form-line">
-                            <input type="text" class="form-control" placeholder="Search..." required autofocus>
-                        </div>
-                    </div>
-                </div>
-                <h6>Recent</h6>
-                <ul class="list-unstyled">
-                    <li class="online">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar4.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="name">Sophia</span>
-                                    <span class="message">There are many variations of passages of Lorem Ipsum available</span>
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>                            
-                    </li>
-                    <li class="online">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar5.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="name">Grayson</span>
-                                    <span class="message">All the Lorem Ipsum generators on the</span>
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>                            
-                    </li>
-                    <li class="offline">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar2.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="name">Isabella</span>
-                                    <span class="message">Contrary to popular belief, Lorem Ipsum</span>
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>                            
-                    </li>
-                    <li class="me">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar1.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="name">John</span>
-                                    <span class="message">It is a long established fact that a reader</span>
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>                            
-                    </li>
-                    <li class="online">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar3.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="name">Alexander</span>
-                                    <span class="message">Richard McClintock, a Latin professor</span>
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>                            
-                    </li>                        
-                </ul>
-                <h6>Contacts</h6>
-                <ul class="list-unstyled">
-                    <li class="offline inlineblock">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar10.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="offline inlineblock">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar6.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="offline inlineblock">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar7.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="offline inlineblock">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar8.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="offline inlineblock">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar9.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="online inlineblock">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar5.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="offline inlineblock">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar4.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="offline inlineblock">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar3.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="online inlineblock">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar2.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="offline inlineblock">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-                                <img class="media-object " src="assets/images/xs/avatar1.jpg" alt="">
-                                <div class="media-body">
-                                    <span class="badge badge-outline status"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div role="tabpanel" class="tab-pane slideLeft" id="settings">
-            <div class="settings slim_scroll">
-                <p class="text-left">General Settings</p>
-                <ul class="setting-list">
-                    <li><span>Report Panel Usage</span>
-                        <div class="switch">
-                            <label><input type="checkbox" checked><span class="lever"></span></label>
-                        </div>
-                    </li>
-                    <li><span>Email Redirect</span>
-                        <div class="switch">
-                            <label><input type="checkbox"><span class="lever"></span></label>
-                        </div>
-                    </li>
-                </ul>
-                <p class="text-left">System Settings</p>
-                <ul class="setting-list">
-                    <li><span>Notifications</span>
-                        <div class="switch">
-                            <label><input type="checkbox" checked><span class="lever"></span></label>
-                        </div>
-                    </li>
-                    <li><span>Auto Updates</span>
-                        <div class="switch">
-                            <label><input type="checkbox" checked><span class="lever"></span></label>
-                        </div>
-                    </li>
-                </ul>
-                <p class="text-left">Account Settings</p>
-                <ul class="setting-list">
-                    <li><span>Offline</span>
-                        <div class="switch">
-                            <label><input type="checkbox"><span class="lever"></span></label>
-                        </div>
-                    </li>
-                    <li><span>Location Permission</span>
-                        <div class="switch">
-                            <label><input type="checkbox" checked><span class="lever"></span></label>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</aside>
+
 
 <!-- Chat-launcher -->
-<div class="chat-launcher"></div>
-<div class="chat-wrapper">
-    <div class="card">
-        <div class="header">
-            <h2>TL Groups</h2>                    
-        </div>
-        <div class="body">
-            <div class="chat-widget">
-            <ul class="chat-scroll-list clearfix">
-                <li class="left float-left">
-                    <img src="assets/images/xs/avatar3.jpg"  alt="">
-                    <div class="chat-info">
-                        <a class="name" href="javascript:void(0);">Alexander</a>
-                        <span class="datetime">6:12</span>                            
-                        <span class="message">Hello, John </span>
-                    </div>
-                </li>
-                <li class="right">
-                    <div class="chat-info"><span class="datetime">6:15</span> <span class="message">Hi, Alexander<br> How are you!</span> </div>
-                </li>
-                <li class="right">
-                    <div class="chat-info"><span class="datetime">6:16</span> <span class="message">There are many variations of passages of Lorem Ipsum available</span> </div>
-                </li>
-                <li class="left float-left"> <img src="assets/images/xs/avatar2.jpg"  alt="">
-                    <div class="chat-info"><a class="name" href="javascript:void(0);">Elizabeth</a> <span class="datetime">6:25</span> <span class="message">Hi, Alexander,<br> John <br> What are you doing?</span> </div>
-                </li>
-                <li class="left float-left"> <img src="assets/images/xs/avatar1.jpg"  alt="">
-                    <div class="chat-info"><a class="name" href="javascript:void(0);">Michael</a> <span class="datetime">6:28</span> <span class="message">I would love to join the team.</span> </div>
-                </li>
-                    <li class="right">
-                    <div class="chat-info"><span class="datetime">7:02</span> <span class="message">Hello, <br>Michael</span> </div>
-                </li>
-            </ul>
-            </div>
-            <div class="input-group">
-                <div class="form-line">
-                    <input type="text" class="form-control date" placeholder="Enter your email...">
-                </div>
-                <span class="input-group-addon"> <i class="material-icons">send</i> </span>
-            </div>
-        </div>
-    </div>
-</div>
 
-<section class="content ecommerce-page">
-    <div class="block-header">
-        <div class="row">
-            <div class="col-lg-7 col-md-6 col-sm-12">
-                <h2>Product Detail
-                <small class="text-muted">Welcome to Nexa Application</small>
-                </h2>
-            </div>
-            <div class="col-lg-5 col-md-6 col-sm-12">
-                <ul class="breadcrumb float-md-right">
-                    <li class="breadcrumb-item"><a href="index.php"><i class="zmdi zmdi-home"></i> Nexa</a></li>
-                    <li class="breadcrumb-item"><a href="ec-dashboard.php">eCommerce</a></li>
-                    <li class="breadcrumb-item active">Product Detail</li>
-                </ul>
-            </div>
+
+<div class='container'>
+  <div class='window'>
+    <div class='order-info'>
+      <div class='order-info-content'>
+        <h2>Order Summary</h2>
+                <div class='line'></div>
+        <table class='order-table'>
+          <tbody>
+          <?php 
+                                if (!empty($_SESSION['shop'])){
+                                    foreach ($_SESSION['shop'] as $id => $product) {
+                                        $totaljumlah+= $product['price'] * $product['jumlah'];
+                                        $_SESSION['tol']=$totaljumlah;
+
+                                   
+                                
+                                echo "</tr>"; 
+                                echo "<tr>";
+                                 echo "<td><img src='assets/images/ecommerce/Product8.png' class='full-width'></img>";
+                                 echo "</td>";
+                                echo "<td>";
+                                echo "<br> <span class='thin'>".$product['name']."</span>";
+                                echo "<br> ".$product['jumlah']."<br> 
+                                <span class='thin small'> Harga= ".$product['price']."<br><br></span>";
+                           echo "</td>";
+                         echo"</tr>";
+                        echo "<tr>";
+            echo "</tr>";
+                            }
+                        }
+                            ?>
+            
+          </tbody>
+
+       
+
+            </tr>
+            <tr>
+              <td>
+                
+              </td>
+            </tr>
+          </tbody>
+          
+        </table>
+        <div class='line'></div>
+        <div class='total'>
+          <span style='float:left;'>
+            
+        
+            TOTAL
+          </span>
+          <span style='float:right; text-align:right;'>
+            
+            <div class='thin dense'></div>
+            <?php
+                $vito=$_SESSION['tol'];
+                echo $vito;
+                ?>
+          </span>
+          
         </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row clearfix">
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="body">
-                        <div class="row">
-                            <div class="preview col-lg-4 col-md-12">
-                                <div class="preview-pic tab-content">
-                                    <div class="tab-pane active" id="product_1"><img src="assets/images/ecommerce/1.png" class="img-fluid" /></div>
-                                    <div class="tab-pane" id="product_2"><img src="assets/images/ecommerce/2.png" class="img-fluid"/></div>
-                                    <div class="tab-pane" id="product_3"><img src="assets/images/ecommerce/3.png" class="img-fluid"/></div>
-                                    <div class="tab-pane" id="product_4"><img src="assets/images/ecommerce/4.png" class="img-fluid"/></div>
-                                    <div class="tab-pane" id="product_5"><img src="assets/images/ecommerce/5.png" class="img-fluid"/></div>
-                                </div>
-                                <ul class="preview-thumbnail nav nav-tabs">
-                                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#product_1"><img src="assets/images/ecommerce/1.png" /></a></li>
-                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#product_2"><img src="assets/images/ecommerce/2.png" /></a></li>
-                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#product_3"><img src="assets/images/ecommerce/3.png" /></a></li>
-                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#product_4"><img src="assets/images/ecommerce/4.png" /></a></li>
-                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#product_5"><img src="assets/images/ecommerce/5.png" /></a></li>
-                                    
-                                </ul>                
-                            </div>
-                            <div class="details col-lg-8 col-md-12">
-                                <h3 class="product-title">Simple Black Clock</h3>
-                                <h4 class="price">Current Price: <span class="col-amber">$180</span></h4>
-                                <div class="rating">
-                                    <div class="stars">
-                                        <span class="zmdi zmdi-star col-amber"></span>
-                                        <span class="zmdi zmdi-star col-amber"></span>
-                                        <span class="zmdi zmdi-star col-amber"></span>
-                                        <span class="zmdi zmdi-star col-amber"></span>
-                                        <span class="zmdi zmdi-star-outline"></span>
-                                    </div>
-                                    <span class="m-l-10">41 reviews</span>
-                                </div>
-                                <hr>
-                                <p class="product-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                <p class="vote"><strong>78%</strong> of buyers enjoyed this product! <strong>(23 votes)</strong></p>
-                                <h5 class="sizes">sizes:
-                                    <span class="size" title="small">s</span>
-                                    <span class="size" title="medium">m</span>
-                                    <span class="size" title="large">l</span>
-                                    <span class="size" title="xtra large">xl</span>
-                                </h5>
-                                <h5 class="colors">colors:
-                                    <span class="color bg-amber not-available"  title="Not In store"></span>
-                                    <span class="color bg-green"></span>
-                                    <span class="color bg-blue"></span>
-                                </h5>
-                                <hr>
-                                <div class="action">
-                                    <button class="btn btn-raised btn-default waves-effect" type="button">add to cart</button>
-                                    <button class="btn btn-raised btn-primary waves-effect" type="button"><span class="zmdi zmdi-favorite"></span></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+</div>
+</div>
+        <div class='credit-info'>
+          <div class='credit-info-content'>
+            <table class='half-input-table'>
+              <tr><td>Please select your card: </td><td><div class='dropdown' id='card-dropdown'><div class='dropdown-btn' id='current-card'>Visa</div>
+                <div class='dropdown-select'>
+                <ul>
+                  <li>Master Card</li>
+                  <li>American Express</li>
+                  </ul></div>
                 </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="body">                        
-                        <ul class="nav nav-tabs">
-                            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#description">Description</a></li>
-                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#review">Review</a></li>
-                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#about">About</a></li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="description">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                            </div>
-                            <div class="tab-pane" id="review">
-                                <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied</p>
-                                <ul class="row list-unstyled c_review">
-                                    <li class="col-12">
-                                        <div class="avatar">
-                                            <a href="javascript:void(0);"><img class="rounded" src="assets/images/xs/avatar2.jpg" alt="user" width="60"></a>
-                                        </div>                                
-                                        <div class="comment-action">
-                                            <h5 class="c_name">Hossein Shams</h5>
-                                            <p class="c_msg m-b-0">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. </p>
-                                            <div class="badge badge-primary">iPhone 8</div>
-                                            <span class="m-l-10">
-                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star-outline text-muted"></i></a>
-                                            </span>
-                                            <small class="comment-date float-sm-right">Dec 21, 2017</small>
-                                        </div>                                
-                                    </li>
-                                    <li class="col-12">
-                                        <div class="avatar">
-                                            <a href="javascript:void(0);"><img class="rounded" src="assets/images/xs/avatar3.jpg" alt="user" width="60"></a>
-                                        </div>                                
-                                        <div class="comment-action">
-                                            <h5 class="c_name">Tim Hank</h5>
-                                            <p class="c_msg m-b-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
-                                            <div class="badge badge-primary">Nokia 8</div>
-                                            <span class="m-l-10">
-                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star col-amber"></i></a>
-                                                <a href="javascript:void(0);"><i class="zmdi zmdi-star-outline text-muted"></i></a>
-                                            </span>
-                                            <small class="comment-date float-sm-right">Dec 18, 2017</small>
-                                        </div>                                
-                                    </li>                                   
-                                </ul>
-                            </div>
-                            <div class="tab-pane" id="about">
-                                <h6>Where does it come from?</h6>
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+               </td></tr>
+            </table>
+            <img src='https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png' height='80' class='credit-card-image' id='credit-card-image'></img>
+            Card Number
+            <input class='input-field'></input>
+            Card Holder
+            <input class='input-field'></input>
+            <table class='half-input-table'>
+              <tr>
+                <td> Expires
+                  <input class='input-field'></input>
+                </td>
+                <td>CVC
+                  <input class='input-field'></input>
+                </td>
+              </tr>
+            </table>
+            <button class='pay-btn'>Checkout</button>
+
+          </div>
+
         </div>
-    </div>   
-</section>
+      </div>
+</div>
 <!-- Jquery Core Js --> 
 <script src="assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
 <script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js --> 
 
 <script src="assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js --> 
+<script src="assets/js/checkout.js"></script>
 </body>
 </html>
