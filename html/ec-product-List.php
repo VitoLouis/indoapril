@@ -68,7 +68,7 @@
                     <li><a href="ec-dashboard.php">Dashboard</a></li>
                     <li><a href="ec-product.php">Product</a></li>
                     <li class="active"><a href="ec-product-List.php">Shopping cart</a></li>
-                    <li><a href="ec-product-detail.php">Product detail</a></li>
+                    <li><a href="ec-product-detail.php">Checkout</a></li>
                 </ul>
             </li>
             
