@@ -11,9 +11,8 @@
           <li>
         
           </li>
-          <li>
-            <a href="mail-inbox.html"><i class="zmdi zmdi-email"></i><span>Inbox</span> </a>
-          </li>
+          
+          
           <li>
             
           </li>
@@ -68,17 +67,7 @@
           </li>
           <li>
           
-          <li class="header">LABELS</li>
-          <li>
-            <a href="javascript:void(0);"><i class="zmdi zmdi-chart-donut col-red"></i><span>Important</span> </a>
-          </li>
-          <li>
-            <a href="javascript:void(0);"><i class="zmdi zmdi-chart-donut col-amber"></i><span>Warning</span> </a>
-          </li>
-          <li>
-            <a href="javascript:void(0);"><i class="zmdi zmdi-chart-donut col-blue"></i><span>Information</span> </a>
-          </li>
-        </ul>
+          
       </div>
       <!-- #Menu -->
     </aside>

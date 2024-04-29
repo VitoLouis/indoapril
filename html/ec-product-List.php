@@ -61,7 +61,7 @@
                 </ul>
             </li>
             
-            <li><a href="mail-inbox.html"><i class="zmdi zmdi-email"></i><span>Inbox</span> </a></li>
+            
            
             <li class="active open"><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-shopping-cart"></i><span>Ecommerce</span> </a>
                 <ul class="ml-menu">
@@ -94,11 +94,7 @@
                 <ul class="ml-menu">
                     <li><a href="sign-in.html">Sign In</a></li>
                     <li><a href="sign-up.html">Sign Up</a></li>
-                    <li><a href="forgot-password.html">Forgot Password</a></li>
-                    <li><a href="404.html">Page 404</a></li>
-                    <li><a href="500.html">Page 500</a></li>
-                    <li><a href="page-offline.html">Page Offline</a></li>
-                    <li><a href="locked.html">Locked Screen</a></li>
+                 
                 </ul>
             </li>
             <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-copy"></i><span>Extra Pages</span> </a>
@@ -118,11 +114,7 @@
             </li>
            
             
-            <li class="header">LABELS</li>
-            <li><a href="javascript:void(0);"><i class="zmdi zmdi-chart-donut col-red"></i><span>Important</span> </a></li>
-            <li><a href="javascript:void(0);"><i class="zmdi zmdi-chart-donut col-amber"></i><span>Warning</span> </a></li>
-            <li><a href="javascript:void(0);"><i class="zmdi zmdi-chart-donut col-blue"></i><span>Information</span> </a></li>
-        </ul>
+            
     </div>
     <!-- #Menu --> 
 </aside>    
@@ -417,6 +409,7 @@
                             <tbody>
             
                             <?php 
+
                                 if (!empty($_SESSION['shop'])){
                                     foreach ($_SESSION['shop'] as $id => $product) {
 
@@ -439,6 +432,7 @@
                             }
                         }
                             ?>
+                            
         
         
                                            
