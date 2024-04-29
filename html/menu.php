@@ -35,10 +35,7 @@
           <li>
             <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-grid"></i><span>Tables</span> </a>
             <ul class="ml-menu">
-              <li><a href="normal-tables.html">Normal Tables</a></li>
-              <li><a href="jquery-datatable.html">Jquery Datatables</a></li>
-              <li><a href="editable-table.html">Editable Tables</a></li>
-              <li><a href="footable.html">Foo Tables</a></li>
+              <li><a href="jquery-datatable.php">Jquery Datatables</a></li>
               <li><a href="table-color.html">Tables Color</a></li>
             </ul>
           </li>
@@ -52,12 +49,7 @@
             <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-lock"></i><span>Authentication</span> </a>
             <ul class="ml-menu">
               <li><a href="sign-in.php">Sign In</a></li>
-              <li><a href="sign-up.html">Sign Up</a></li>
-              <li><a href="forgot-password.html">Forgot Password</a></li>
-              <li><a href="404.html">Page 404</a></li>
-              <li><a href="500.html">Page 500</a></li>
-              <li><a href="page-offline.html">Page Offline</a></li>
-              <li><a href="locked.html">Locked Screen</a></li>
+              <li><a href="sign-up.php">Sign Up</a></li>
             </ul>
           </li>
           <li>

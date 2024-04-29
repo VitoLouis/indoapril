@@ -1,9 +1,11 @@
+
 <div class="user-info">
-        <div class="image">
-          <img src="assets/images/xs/avatar1.jpg" width="48" height="48" alt="User" />
-        </div>
         <div class="info-container">
-          <div class="name" data-toggle="dropdown">Michael R.L</div>
+          <div class="name" data-toggle="dropdown">Halo, 
+          <?php
+          echo $_SESSION['Username'] 
+          ?>
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
           <div class="btn-group user-helper-dropdown">
             <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="button"> keyboard_arrow_down </i>
             <ul class="dropdown-menu slideUp">
@@ -26,6 +28,7 @@
               </li>
             </ul>
           </div>
-          <div class="email">michaelrl@gmail.com</div>
+          <div div class="email" data-toggle="dropdown"> Selamat Datang Di Indoapril
+          </div>
         </div>
       </div>

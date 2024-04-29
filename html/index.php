@@ -1,6 +1,9 @@
 ﻿<?php
 session_start();
     include 'koneksi.php';
+
+    $data = "SELECT * FROM user WHERE Email = '$username' AND Pwd= '$password'";
+
     ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">

@@ -12,18 +12,23 @@ if ( isset($_POST["sign-in"])){
     $menghitung = mysqli_num_rows($result);
 
     //cek username//
+    $query = "SELECT * FROM user WHERE Email = '$username' AND Pwd= '$password'";
+
 if ($menghitung == 1){
     $_SESSION ['Username'] = $username;
+    $_SESSION ['email'] = $email;
     header("Location: index.php");
 }
    
 
     else {
-        $error = "Username atau Password salah, silahkan Coba Lagi";
+        $error = "USERNAME ATAU PASSWORD SALAH, SILAHKAN COBA LAGI";
         echo "<script> 
             alert ('$error');
             window.location.href = 'sign-in.php';
             </script>";
     }
     }
+
+
 

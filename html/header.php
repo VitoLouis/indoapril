@@ -13,6 +13,10 @@
 
     <link rel="stylesheet" href="assets/plugins/jvectormap/jquery-jvectormap-2.0.3.css" />
     <link rel="stylesheet" href="assets/plugins/morrisjs/morris.css" />
+
+    <!-- JQuery DataTable Css -->
+    <link rel="stylesheet" href="assets/plugins/jquery-datatable/dataTables.bootstrap4.min.css" />
+    
     <!-- Custom Css -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/color_skins.css" />

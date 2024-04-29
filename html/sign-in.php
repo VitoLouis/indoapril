@@ -50,10 +50,9 @@ include "koneksi.php";
             
             <div class="col-lg-12">
               <button class="btn btn-raised btn-primary waves-effect" name="sign-in" type ="submit">SIGN IN</button>
-              <button class="btn btn-raised btn-default waves-effect" name="sign-up" type ="submit">SIGN UP</button>
             </div>
             <div class="col-lg-12 m-t-20">
-               <a class="" href="forgot-password.html">Forgot Password?</a>
+               <a class="" href="sign-up.php"> Don't Have a Account?</a>
               </div>
             </div>
           </div>
