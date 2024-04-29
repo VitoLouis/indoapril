@@ -28,7 +28,7 @@
               </li>
             </ul>
           </div>
-          <div div class="email" data-toggle="dropdown"> Selamat Datang Di Indoapril
+          <div div class="email" data-toggle="dropdown"> <?php echo $_SESSION['emailll']?>
           </div>
         </div>
       </div>
