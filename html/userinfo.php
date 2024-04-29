@@ -1,9 +1,8 @@
-
 <div class="user-info">
         <div class="info-container">
           <div class="name" data-toggle="dropdown">Halo, 
           <?php
-          echo $_SESSION['Username'] 
+          echo $_SESSION['Username']
           ?>
           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
           <div class="btn-group user-helper-dropdown">
@@ -28,7 +27,7 @@
               </li>
             </ul>
           </div>
-          <div div class="email" data-toggle="dropdown"> Selamat Datang Di Indoapril
+          <div div class="email" data-toggle="dropdown">
           </div>
         </div>
       </div>
