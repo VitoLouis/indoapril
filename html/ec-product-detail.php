@@ -127,13 +127,7 @@ ul li:hover {
 .order-table {
     position:relative;
 }
-.line {
-  height:1px;
-  width:100%;
-  margin-top:10px;
-  margin-bottom:10px;
-  background:#ddd;
-}
+
 .order-table td:last-of-type {
   vertical-align:top;
   padding-left:25px;
@@ -331,7 +325,6 @@ ul li:hover {
                 </ul>
             </li>
             
-            <li><a href="mail-inbox.html"><i class="zmdi zmdi-email"></i><span>Inbox</span> </a></li>
           
             <li class="active open"><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-shopping-cart"></i><span>Ecommerce</span> </a>
                 <ul class="ml-menu">
@@ -407,7 +400,7 @@ ul li:hover {
     <div class='order-info'>
       <div class='order-info-content'>
         <h2>Order Summary</h2>
-                <div class='line'></div>
+                
         <table class='order-table'>
           <tbody>
           <?php 
@@ -447,7 +440,7 @@ ul li:hover {
           </tbody>
           
         </table>
-        <div class='line'></div>
+        
         <div class='total'>
           <span style='float:left;'>
             
@@ -469,28 +462,26 @@ ul li:hover {
         <div class='credit-info'>
           <div class='credit-info-content'>
             <table class='half-input-table'>
-              <tr><td>Please select your card: </td><td><div class='dropdown' id='card-dropdown'><div class='dropdown-btn' id='current-card'>Visa</div>
+              <tr><td>Please select your card: </td><td><div class='dropdown' id='card-dropdown'><div class='dropdown-btn' id='current-card'>CASH</div>
                 <div class='dropdown-select'>
                 <ul>
-                  <li>Master Card</li>
-                  <li>American Express</li>
+                  <li>CASH</li>
+                  <li></li>
                   </ul></div>
                 </div>
                </td></tr>
             </table>
-            <img src='https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png' height='80' class='credit-card-image' id='credit-card-image'></img>
-            Card Number
-            <input class='input-field'></input>
-            Card Holder
-            <input class='input-field'></input>
+            <img src='assets/images/cashimage.png' height='80' class='credit-card-image' id='credit-card-image'></img>
+            Price 
+            <input class='input-field' value="<?php echo $_SESSION['tol']?> " disabled> </input>
+            Input
+            <input class='input-field' id='inputField'>  </input>
             <table class='half-input-table'>
               <tr>
-                <td> Expires
-                  <input class='input-field'></input>
+                <td> Kembalian
+                  <input disabled class='input-field' id='kembalianField' >  </input>
                 </td>
-                <td>CVC
-                  <input class='input-field'></input>
-                </td>
+                
               </tr>
             </table>
             <button class='pay-btn'>Checkout</button>
@@ -506,5 +497,13 @@ ul li:hover {
 
 <script src="assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js --> 
 <script src="assets/js/checkout.js"></script>
+<script>
+  document.getElementById('inputField').addEventListener('input', function() {
+    var inputVal = parseFloat(this.value); // Parse input value to a float
+    var tol = parseFloat(<?php echo $_SESSION['tol']; ?>); // Get the value stored in $_SESSION['tol']
+    var kembalian = inputVal - tol ; // Subtract input value from tol
+    document.getElementById('kembalianField').value = kembalian.toFixed(2); // Display the result in the kembalianField
+  });
+</script>
 </body>
 </html>

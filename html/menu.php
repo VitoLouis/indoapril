@@ -11,9 +11,8 @@
           <li>
         
           </li>
-          <li>
-            <a href="mail-inbox.html"><i class="zmdi zmdi-email"></i><span>Inbox</span> </a>
-          </li>
+          
+          
           <li>
             
           </li>

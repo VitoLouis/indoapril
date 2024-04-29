@@ -61,7 +61,7 @@
                 </ul>
             </li>
             
-            <li><a href="mail-inbox.html"><i class="zmdi zmdi-email"></i><span>Inbox</span> </a></li>
+            
            
             <li class="active open"><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-shopping-cart"></i><span>Ecommerce</span> </a>
                 <ul class="ml-menu">
@@ -417,6 +417,7 @@
                             <tbody>
             
                             <?php 
+
                                 if (!empty($_SESSION['shop'])){
                                     foreach ($_SESSION['shop'] as $id => $product) {
 
@@ -439,6 +440,7 @@
                             }
                         }
                             ?>
+                            
         
         
                                            
