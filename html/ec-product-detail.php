@@ -409,8 +409,11 @@ ul li:hover {
                                  echo "</td>";
                                 echo "<td>";
                                 echo "<br> <span class='thin'>".$product['name']."</span>";
+                                $_SESSION['nmproduk'] = $product['name'];
                                 echo "<br> ".$product['jumlah']."<br> 
                                 <span class='thin small'> Harga= ".$product['price']."<br><br></span>";
+                                $_SESSION['jmlhproduk'] = $product['jumlah'];
+                                $_SESSION['harga'] = $product['price'];
                            echo "</td>";
                          echo"</tr>";
                         echo "<tr>";
@@ -476,8 +479,9 @@ ul li:hover {
                 
               </tr>
             </table>
+            <form action="btnchek.php" method ="POST">
             <button class='pay-btn'>Checkout</button>
-
+            </form>
           </div>
 
         </div>
