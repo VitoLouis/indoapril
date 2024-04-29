@@ -8,18 +8,21 @@ if ( isset($_POST["sign-in"])){
     $password = $_POST['Password'];
     
     $result = mysqli_query($koneksi, "SELECT * FROM user WHERE Nama = '$username' AND Pwd= '$password'");
-    
+    while($titid= mysqli_fetch_array($result)){
+        $_SESSION['emailll'] =$titid['Email'];
+        $_SESSION['useridd'] =$titid['UserID'];
+    }
     
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
     $menghitung = mysqli_num_rows($result);
     
 
     //cek username//
-    $query = "SELECT * FROM user WHERE Email = '$username' AND Pwd= '$password'";
+    $query =mysqli_query($koneksi, "SELECT * FROM user ");
+   
 
 if ($menghitung == 1){
     $_SESSION ['Username'] = $username;
-    $_SESSION ['email'] = $email;
     header("Location: index.php");
 }
    

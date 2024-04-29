@@ -480,7 +480,7 @@ ul li:hover {
               </tr>
             </table>
             <form action="btnchek.php" method ="POST">
-            <button name ="check" class='pay-btn'>Checkout</button>
+            <button onclick="location.href='thankyou.html'" name ="check"  class='pay-btn'>Checkout</button>
             </form>
           </div>
 

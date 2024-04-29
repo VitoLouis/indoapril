@@ -27,7 +27,7 @@
               </li>
             </ul>
           </div>
-          <div div class="email" data-toggle="dropdown">
+          <div div class="email" data-toggle="dropdown"> <?php echo $_SESSION['emailll']?>
           </div>
         </div>
       </div>
