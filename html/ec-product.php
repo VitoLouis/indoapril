@@ -70,13 +70,9 @@ session_start();
             </li>
             <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-grid"></i><span>Tables</span> </a>
                 <ul class="ml-menu">                        
-                    <li><a href="normal-tables.html">Normal Tables</a></li>
-                    <li><a href="jquery-datatable.html">Jquery Datatables</a></li>
-                    <li><a href="editable-table.html">Editable Tables</a></li>
-                    <li><a href="footable.html">Foo Tables</a></li>
-                    <li><a href="table-color.html">Tables Color</a></li>
-                    <li><a href="footable.html">Foo Tables</a></li>
-                    <li><a href="table-color.html">Tables Color</a></li>
+                    
+                    <li><a href="jquery-datatable.php">Employee Table</a></li>
+                    
                 </ul>
             </li>
             
