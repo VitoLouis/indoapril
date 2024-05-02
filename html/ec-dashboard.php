@@ -1,114 +1,48 @@
 ﻿<?php
+session_start();
     include 'koneksi.php';
     ?>
-<!doctype html>
-<html class="no-js " lang="en">
+<!DOCTYPE html>
+<html class="no-js" lang="en">
 <?php
     include 'header.php';
     ?>
-
-<body class="theme-orange">
-<!-- Page Loader -->
-<div class="page-loader-wrapper">
-    <div class="loader">        
+  <body class="theme-orange">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+      <div class="loader">
         <div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
         <p>Please wait...</p>
-        <div class="m-t-30"><img src="assets/images/logo.svg" width="48" height="48" alt="Nexa"></div>
+        <div class="m-t-30"><img src="assets/images/logo.svg" width="48" height="48" alt="Nexa" /></div>
+      </div>
     </div>
-</div>
-<!-- Overlay For Sidebars -->
-<div class="overlay"></div><!-- Search  -->
-<div class="search-bar">
-    <div class="search-icon"> <i class="material-icons">search</i> </div>
-    <input type="text" placeholder="Explore Nexa...">
-    <div class="close-search"> <i class="material-icons">close</i> </div>
-</div>
-<!-- Top Bar -->
-<?php
-    include 'navbar.php';
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- Search  -->
+    <div class="search-bar">
+      <div class="search-icon"><i class="material-icons">search</i></div>
+      <input type="text" placeholder="Explore Nexa..." />
+      <div class="close-search"><i class="material-icons">close</i></div>
+    </div>
+
+    <!-- Top Bar -->
+    <?php
+    include 'Navbar.php';
     ?>
 
-<!-- Left Sidebar -->
-<aside id="leftsidebar" class="sidebar">
-    <!-- User Info -->
-    <?php
+    <!-- Left Sidebar -->
+    <aside id="leftsidebar" class="sidebar">
+      <!-- User Info -->
+      <?php
     include 'userinfo.php';
     ?>
-    <!-- #User Info --> 
-    <!-- Menu -->
-    <div class="menu">
-        <ul class="list">
-            <li class="header">MAIN NAVIGATION</li>
-            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a>
-                <ul class="ml-menu">
-                    <li><a href="index.php">Main Dashboard</a></li>
-
-                    
-                  
-                    <li><a href="ec-dashboard.php">Ecommerce Dashboard</a></li>
-                         
-                </ul>
-            </li>
-            
-           
-            
-            <li class="active open"><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-shopping-cart"></i><span>Ecommerce</span> </a>
-                <ul class="ml-menu">
-                    <li class="active"><a href="ec-dashboard.php">Dashboard</a></li>
-                    <li><a href="ec-product.php">Product</a></li>
-                    <li><a href="ec-product-List.php">Shopping Cart</a></li>
-                    <li><a href="ec-product-detail.php">Checkout</a></li>
-                </ul>
-            </li>
-            
-            </li>
-            
-            </li>
-            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-grid"></i><span>Tables</span> </a>
-                <ul class="ml-menu">                        
-                    <li><a href="normal-tables.html">Normal Tables</a></li>
-                    <li><a href="jquery-datatable.html">Jquery Datatables</a></li>
-                    <li><a href="editable-table.html">Editable Tables</a></li>
-                    <li><a href="footable.html">Foo Tables</a></li>
-                    <li><a href="table-color.html">Tables Color</a></li>
-                    <li><a href="footable.html">Foo Tables</a></li>
-                    <li><a href="table-color.html">Tables Color</a></li>
-                </ul>
-            </li>
-           
-            </li>
-            
-            </li>
-            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-lock"></i><span>Authentication</span> </a>
-                <ul class="ml-menu">
-                    <li><a href="sign-in.html">Sign In</a></li>
-                    <li><a href="sign-up.html">Sign Up</a></li>
-
-                </ul>
-            </li>
-            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-copy"></i><span>Extra Pages</span> </a>
-                <ul class="ml-menu">
-                    <li><a href="blank.html">Blank Page</a></li>
-                    <li><a href="events.html">Calendar</a></li>
-                    <li><a href="profile.html">Profile</a></li>
-                    <li><a href="timeline.html">Timeline</a></li>
-                    <li><a href="chat.html">Chat</a></li>
-                    <li><a href="contact.html">Contact list</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="invoices.html">Invoices</a></li>
-                    <li><a href="search-results.html">Search Results</a></li>
-                </ul>
-            </li>
-            
-            </li>
-            
-           
-            
-    </div>
-    <!-- #Menu --> 
-</aside>    
+      <!-- #User Info -->
+      <!-- Menu -->
+      <?php
+    include 'menu.php';
+    ?>
 <!-- Right Sidebar -->
 <aside id="rightsidebar" class="right-sidebar">
     <ul class="nav nav-tabs">

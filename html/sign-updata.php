@@ -36,11 +36,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         } else {
             
-            echo "<script>alert('Semua field harus diisi.');</script>";
+            echo "<script>alert('SEMUA FIELD HARUS DIISI.');</script>";
             echo "<script>window.location = 'sign-up.php';</script>";
         }
     } else {
-        echo "<script>alert('Data yang diperlukan tidak ditemukan.');</script>";
+        echo "<script>alert('DATA YANG DIPERLUKAN TIDAK DI TEMUKAN.');</script>";
         echo "<script>window.location = 'sign-up.php';</script>"; 
     }
 }
